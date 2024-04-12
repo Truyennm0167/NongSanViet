@@ -78,24 +78,20 @@
 
             <div class="col-md-4 col-sm-6 mb-5">
 
-                <div class="offcanvas offcanvas-start" id="menu">
-                    <div class="offcanvas-header">
-                        <h1 class="offcanvas-title">Sản Phẩm</h1>
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
-                    </div>
-
-                    <div class="offcanvas-body">
-                        <div class="d-grid gap-3">
-                            <a href="traicay.html" class="btn btn-outline-dark btn-block">Trái Cây</a>
-                            <a href="rau.html" class="btn btn-outline-dark btn-block active">Rau</a>
-                            <a href="cu.html" class="btn btn-outline-dark btn-block">Củ</a>
-                            <a href="nam.html" class="btn btn-outline-dark btn-block">Nấm</a>
-                        </div>
+                <div class="filter">
+                    <button id="button" class="button">Phân Loại</button>
+                
+                    <div class="menu-filter">
+                        <table>
+                            <tr>
+                                <td><div class="cell" onclick="traicay_redirect()">Trái Cây</div></td>
+                                <td><div class="cell" onclick="rau_redirect()">Rau</div></td>
+                                <td><div class="cell" onclick="cu_redirect()">Củ</div></td>
+                                <td><div class="cell" onclick="nam_redirect()">Nấm</div></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
-
-                <button class="btn btn-outline-dark" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#menu">Phân loại</button>
 
                 <div class="card ms-5 mt-5 w-75">
                     <img src="img/xalach1.jpg" class="imgcrop" alt="">
@@ -119,8 +115,8 @@
 
             </div>
 
-            <div class="col-md-4 col-sm-6 mb-5">
-                <form action="" class="d-flex">
+            <div class="col-md-4 col-sm-6 mb-5" style="padding-top: 10px;">
+                <form action="" class="d-flex" style="padding-bottom: 55px;">
                     <div class="search">
                         <span class="search-icon material-symbols-outlined">search</span>
                         <input class="search-input" type="search" placeholder="Nhập loại sản phẩm">
@@ -149,7 +145,7 @@
 
             </div>
 
-            <div class="col-md-4 col-sm-6 mb-5" style="padding-top: 35px;">
+            <div class="col-md-4 col-sm-6 mb-5" style="padding-top: 100px;">
 
                 <div class="card ms-5 mt-5 w-75">
                     <img src="img/raumuong1.jpg" class="imgcrop" alt="">
@@ -208,6 +204,7 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/dropdown.js"></script>
 <script>
     const toTopBtn = document.querySelector(".to-top");
     window.addEventListener('scroll', () => {
