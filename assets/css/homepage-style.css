@@ -1,0 +1,267 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    height: 125px;
+    background-color: white;
+    font-size: large;
+}
+
+header nav li {
+    margin: 0 20px;
+}
+
+header a:hover,
+main .kop:hover {
+    color: #71B979 !important;
+}
+
+header #logo {
+    height: 90px;
+    margin: 10 20px;
+}
+
+header .account {
+    border: 1px solid white;
+    height: 42px;
+    width: 48px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+header .account a {
+    text-decoration: none;
+}
+
+main .col {
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+header .account:hover,
+main .col:hover {
+    border-color: #71B979;
+}
+
+header .account-icon {
+    margin-top: 8px;
+}
+
+.empty {
+    width: 48px;
+    margin: 20px;
+}
+
+#user-icon {
+    font-size: 20px;
+    margin-right: -3px;
+}
+
+.account-dropdown {
+    margin-top: 6px !important;
+    border-radius: 10px !important;
+}
+
+.kop-list img {
+    width: 200px;
+}
+
+.kop-list a {
+    text-decoration: none;
+}
+
+main h2 {
+    text-transform: uppercase;
+}
+
+.infor-container {
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+
+.infor-container:hover {
+    border-color: #71B979;
+}
+
+.infor {
+    margin: 50px;
+}
+
+.infor .title {
+    background-color: #71B979;
+    font-size: 30px;
+}
+
+.infor img {
+    width: 400px;
+}
+
+.infor .content {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: justify;
+}
+
+.hot-news-container, today-list-container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 50px;
+    border-radius: 10px;
+}
+
+.title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.title h4 {
+    color: #333;
+    font-size: 32px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.title h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 140px;
+    height: 2px;
+    background-color: #71B979;
+    transform: translateX(-50%);
+}
+
+.news-list, .today-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.news-item {
+    border: 2px dashed #71B979;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+.news-item img, .today-item img {
+    margin-bottom: 12px;
+    max-width: 100%;
+    border-radius: 8px;
+    height: 300px;
+}
+
+.news-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.news-title:hover {
+    cursor: pointer;
+    color: #71B979;
+}
+
+.content {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.news-item div, .today-item div {
+    margin-right: 10px;
+    text-align: justify;
+}
+
+.today-item {
+    border: 2px solid white;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+.today-item:hover {
+    border-color: #71B979;
+}
+
+footer {
+    height: 200px;
+    background-color: #71B979;
+    text-align: center;
+    font-size: 12px;
+}
+
+footer .contact-info {
+    text-align: left;
+}
+
+footer .contact-info a {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+footer .contact-info li {
+    background-color: #71B979;
+}
+
+footer .footer-tittle {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    text-align: justify;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+footer img {
+    height: 125px;
+    margin-top: 10px;
+}
+
+.row {
+    --bs-gutter-x: -0.5rem;
+}
+
+.to-top {
+    border: none;
+    background: #71B979;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}

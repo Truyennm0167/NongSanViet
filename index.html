@@ -15,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/homepage-style.css">
 </head>
 <body>
 
@@ -91,8 +91,48 @@
     </div>
 
     <main>
-        <div class="container text-center">
-            <h2 class="text-center m-4">Danh mục sản phẩm</h2>
+
+        <div class="container today-list-container">
+            <div class="title">
+                <h4 class="text-center">HÔM NAY ĂN GÌ?</h4>
+            </div>
+        
+            <div class="today-list">
+                <div class="today-item">
+                    <img src="img/news1.jpg" alt="">
+                    <div>
+                        <p class="news-title">Nông Sản Việt: Điểm Sáng Trong Bức Tranh Kinh Tế</p>
+                        <p class="content">Nông sản Việt Nam đang đóng góp tích cực vào nền kinh tế quốc gia với sự phát triển ổn định và tiềm năng lớn.</p>
+                    </div>
+                   
+                </div>
+        
+                <div class="today-item">
+                    <img src="img/news2.jpg" alt="">
+                    <div>
+                        <p class="news-title">Bí Quyết Chọn Lựa Trái Cây Tươi Nguyên</p>
+                        <p class="content">Bí quyết để chọn lựa trái cây tươi nguyên giúp đảm bảo sức khỏe và thưởng thức hương vị tuyệt vời.</p>
+                    </div>
+                </div>
+
+                <div class="today-item">
+                    <img src="img/news3.jpg" alt="">
+                    <div>
+                        <p class="news-title">Gia Vị Cuộc Sống: Công Thức Nấu Ăn Gia Đình</p>
+                        <p class="content">Gia vị là yếu tố quan trọng không thể thiếu trong bất kỳ món ăn nào, tạo nên hương vị đặc biệt cho bữa ăn gia đình.</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="title">
+                <h4>DANH MỤC SẢN PHẨM</h4>
+            </div>
+            
             <div class="row kop-list">
                 <div class="col">
                 <div>
@@ -123,27 +163,72 @@
             </div>
         </div>
 
-        <div class="infor d-flex">
-            <div class="">
-                <img src="./img/infor-banner.png" alt="">
-            </div>
-            <div class="flex-grow-1">
-                <div class="content-container">
-                    <h4 class="m-3 text-center text-white title">CÁCH CHỌN NÔNG SẢN SẠCH</h4>
-                    <div class="content">
-                        <p>
-                            <b>Dựa vào hình dáng bên ngoài nông sản: </b>Nên lựa rau củ còn tươi, không bị trầy xước hay dập nát. Đặt biệt nhưng nông sản có cuống, bạn nên chọn quả còn cuống xanh dính vào thân, không vị thâm nhũn.  Những quả có xuất hiện những vết lấm tấm trắng, dấu hiệu lạ đều không nên sử dụng.
-                        </p>
-                        <p>
-                            <b>Dựa vào mùi hương: </b>Mỗi loại rau củ quả đều sẽ có một mùi đặc trưng riêng. Do đó khi đưa lên ngửi, bạn thấy mùi hắc hắc, mùi lạ hay có cảm giác nồng như thuốc hóa học thì không nên chọn nhé! Đó có thể là những quả không còn tươi được nhúng vào hóa chất để có thể nhìn tươi hơn.
-                        </p>
-                        <p>
-                            <b>Dựa vào tay để cảm nhận: </b>Những loại nông sản đạt chất lượng, khi cầm sẽ có cảm giác nặng tay. Ngược lại những quả nhẹ tay, mềm nhũn như sắp dập thì là những thực phẩm bị phun thuốc.
-                        </p>
-                    </div> 
+        <div class="infor-container">
+
+            <div class="infor d-flex">
+                <div class="">
+                    <img src="./img/infor-banner.png" alt="">
+                </div>
+                <div class="flex-grow-1">
+                    <div class="content-container">
+                        <h4 class="m-3 text-center text-white title">CÁCH CHỌN NÔNG SẢN SẠCH</h4>
+                        <div class="content">
+                            <p>
+                                <b>Dựa vào hình dáng bên ngoài nông sản: </b>Nên lựa rau củ còn tươi, không bị trầy xước hay dập nát. Đặt biệt nhưng nông sản có cuống, bạn nên chọn quả còn cuống xanh dính vào thân, không vị thâm nhũn.  Những quả có xuất hiện những vết lấm tấm trắng, dấu hiệu lạ đều không nên sử dụng.
+                            </p>
+                            <p>
+                                <b>Dựa vào mùi hương: </b>Mỗi loại rau củ quả đều sẽ có một mùi đặc trưng riêng. Do đó khi đưa lên ngửi, bạn thấy mùi hắc hắc, mùi lạ hay có cảm giác nồng như thuốc hóa học thì không nên chọn nhé! Đó có thể là những quả không còn tươi được nhúng vào hóa chất để có thể nhìn tươi hơn.
+                            </p>
+                            <p>
+                                <b>Dựa vào tay để cảm nhận: </b>Những loại nông sản đạt chất lượng, khi cầm sẽ có cảm giác nặng tay. Ngược lại những quả nhẹ tay, mềm nhũn như sắp dập thì là những thực phẩm bị phun thuốc.
+                            </p>
+                        </div> 
+                    </div>
                 </div>
             </div>
+
         </div>
+
+
+        <div class="hot-news-container">
+            <div class="title">
+                <h4>TIN TỨC NỔI BẬT</h4>
+            </div>
+        
+            <div class="news-list">
+                <div class="news-item">
+                    <img src="img/news1.jpg" alt="">
+                    <div>
+                        <p class="news-title">Nông Sản Việt: Điểm Sáng Trong Bức Tranh Kinh Tế</p>
+                        <p class="content">Nông sản Việt Nam đang đóng góp tích cực vào nền kinh tế quốc gia với sự phát triển ổn định và tiềm năng lớn.</p>
+                    </div>
+                   
+                </div>
+        
+                <div class="news-item">
+                    <img src="img/news2.jpg" alt="">
+                    <div>
+                        <p class="news-title">Bí Quyết Chọn Lựa Trái Cây Tươi Nguyên</p>
+                        <p class="content">Bí quyết để chọn lựa trái cây tươi nguyên giúp đảm bảo sức khỏe và thưởng thức hương vị tuyệt vời.</p>
+                    </div>
+                </div>
+
+                <div class="news-item">
+                    <img src="img/news3.jpg" alt="">
+                    <div>
+                        <p class="news-title">Gia Vị Cuộc Sống: Công Thức Nấu Ăn Gia Đình</p>
+                        <p class="content">Gia vị là yếu tố quan trọng không thể thiếu trong bất kỳ món ăn nào, tạo nên hương vị đặc biệt cho bữa ăn gia đình.</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+
+        
+        
+
+
     </main>
 
     <button class="to-top" href="#"><i class="ti-angle-double-up"></i></button>
@@ -201,6 +286,17 @@
             $('html, body').animate({scrollTop : 0},800);
             return false;
         });
+
+        $('.news-container').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            prevArrow: $('.prev'),
+            nextArrow: $('.next'),
+            autoplay: false,
+            autoplaySpeed: 3000,
+            infinite: false
+        });
+
     });
 
 </script>
