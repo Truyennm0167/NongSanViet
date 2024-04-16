@@ -6,6 +6,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.slider img {
+    margin-top: 100px !important;
+}
+
 main .col {
     margin: 10px;
     border: 2px solid white;

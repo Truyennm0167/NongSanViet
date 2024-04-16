@@ -1,7 +1,8 @@
 header {
-    height: 125px;
+    height: 200px;
+    padding-top: 20px;
     background-color: white;
-    font-size: large;
+    font-size: x-large;
 }
 
 header nav li {
@@ -13,38 +14,39 @@ header a:hover {
 }
 
 header #logo {
-    height: 90px;
+    height: 130px;
     margin: 10 20px;
 }
 
-header .account {
+.header-btn {
     border: 1px solid white;
-    height: 42px;
-    width: 48px;
-    margin: 20px;
+    height: 60px;
+    width: 70px;
+    margin-top: 40px;
+    margin-right: 30px;
     border-radius: 10px;
     text-align: center;
 }
 
-header .account a {
+.header-btn a {
     text-decoration: none;
 }
 
-header .account:hover {
+.header-btn:hover {
     border-color: #71B979;
 }
 
-header .account-icon {
-    margin-top: 8px;
+.account-icon, .shopping-cart-icon {
+    margin-top: 14px;
 }
 
 .empty {
-    width: 48px;
+    width: 190px;
     margin: 20px;
 }
 
-#user-icon {
-    font-size: 20px;
+#user-icon, #cart-icon {
+    font-size: 30px;
     margin-right: -3px;
 }
 
@@ -57,7 +59,7 @@ footer {
     height: 200px;
     background-color: #71B979;
     text-align: center;
-    font-size: 12px;
+    font-size: 17px;
 }
 
 footer .contact-info {
@@ -97,27 +99,47 @@ footer img {
 }
 
 .to-top {
-    border: none;
+    border: 2px solid forestgreen;
     background: #71B979;
     position: fixed;
-    bottom: 16px;
+    bottom: 72px;
     right: 32px;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 32px;
     color: white;
-    text-decoration: none;
     opacity: 0;
     pointer-events: none;
     transition: all .4s;
 }
 
 .active {
-    bottom: 32px;
+    bottom: 100px;
     pointer-events: auto;
     opacity: 1;
+}
+
+.contact-btn {
+    border: 2px solid forestgreen;
+    background: #71B979;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    opacity: 1;
+}
+
+.contact-btn a {
+    text-decoration: none;
+    color: white;
 }
