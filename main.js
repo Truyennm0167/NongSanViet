@@ -146,13 +146,13 @@ function searchProduct() {
       } else {
           searchResults.forEach(product => {
               const productHtml = `
-                  <div class="col-md-4 col-sm-6 mb-5">
-                      <div class="card ms-5 mt-5 w-75">
+                  <div class="col-3 mb-5">
+                      <div class="card ms-5 mt-5 w-auto">
                           <img src="${product.image}" class="card-img-top p-2 rounded-4" alt="${product.name}">
                           <div class="card-body">
                               <h5 class="card-title">${product.name}</h5>
-                              <p class="card-text">${product.price} đ</p>
-                              <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+                              <p class="card-text">${product.price}</p>
+                              <button class="btn btn-success">Thêm vào giỏ hàng</button>
                           </div>
                       </div>
                   </div>
