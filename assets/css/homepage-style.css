@@ -80,10 +80,12 @@ main h2 {
 .infor .title {
     background-color: #71B979;
     font-size: 30px;
+    border-radius: 5px;
 }
 
 .infor img {
     width: 400px;
+    border-radius: 5px;
 }
 
 .infor .content {
@@ -132,6 +134,7 @@ main h2 {
     width: 100%;
     height: 300px;
     object-fit: cover;
+    border-radius: 5px;
 }
 
 .hot-news .swiper {

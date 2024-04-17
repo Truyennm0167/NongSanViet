@@ -99,13 +99,13 @@ footer img {
 }
 
 .to-top {
-    border: 2px solid forestgreen;
+    border: none;
     background: #71B979;
     position: fixed;
     bottom: 72px;
     right: 32px;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -124,13 +124,13 @@ footer img {
 }
 
 .contact-btn {
-    border: 2px solid forestgreen;
+    border: none;
     background: #71B979;
     position: fixed;
     bottom: 32px;
     right: 32px;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
