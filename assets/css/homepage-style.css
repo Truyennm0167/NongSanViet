@@ -10,17 +10,17 @@ html {
     margin-top: 100px !important;
 }
 
-main .col {
+.kop-list-container .col {
     margin: 10px;
     border: 2px solid white;
     border-radius: 20px;
 }
 
-main .col:hover {
+.kop-list-container .col:hover {
     border-color: #71B979;
 }
 
-main .kop:hover {
+.kop-list-container .kop:hover {
     color: #71B979 !important;
 }
 
@@ -65,7 +65,7 @@ main h2 {
     text-align: justify;
 }
 
-.hot-news-container, today-list-container {
+.hot-news-container, .today-list-container {
     background-color: #fff;
     padding: 20px;
     margin: 50px;

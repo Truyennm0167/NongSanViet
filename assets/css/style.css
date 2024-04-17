@@ -6,67 +6,14 @@ html {
     scroll-behavior: smooth;
 }
 
-header {
-    height: 125px;
-    background-color: white;
-    font-size: large;
-}
-
-header nav li {
-    margin: 0 20px;
-}
-
-header a:hover,
-main .kop:hover {
-    color: #71B979 !important;
-}
-
-header #logo {
-    height: 90px;
-    margin: 10 20px;
-}
-
-header .account {
-    border: 1px solid white;
-    height: 42px;
-    width: 48px;
-    margin: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-header .account a {
-    text-decoration: none;
-}
-
-main .col {
+.kop-list-container .col {
     margin: 10px;
     border: 1px solid white;
     border-radius: 20px;
 }
 
-header .account:hover,
-main .col:hover {
+.kop-list-container .col:hover {
     border-color: #71B979;
-}
-
-header .account-icon {
-    margin-top: 8px;
-}
-
-.empty {
-    width: 48px;
-    margin: 20px;
-}
-
-#user-icon {
-    font-size: 20px;
-    margin-right: -3px;
-}
-
-.account-dropdown {
-    margin-top: 6px !important;
-    border-radius: 10px !important;
 }
 
 .kop-list img {

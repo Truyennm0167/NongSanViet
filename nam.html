@@ -24,8 +24,8 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header&footer.css">
 </head>
-
 <body>
 
     <!--Header-->
@@ -55,19 +55,31 @@
                 </ul>
             </nav>
 
-            <div class="account">
-                <a href="">
-                    <div class="nav-item dropdown account-icon">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
-                            <i id="user-icon" class="ti-user text-secondary"></i>
-                        </a>
-                        <ul class="dropdown-menu account-dropdown">
-                            <li><a class="dropdown-item text-secondary" href="login.html">Đăng Nhập</a></li>
-                            <li><a class="dropdown-item text-secondary" href="signup.html">Đăng Ký</a></li>
-                        </ul>
+
+            <div class="d-flex justify-content-end">
+                <div class="header-btn shopping-cart-btn">
+                    <div class="shopping-cart-icon">
+                       <a href="cart.html">
+                            <i id="cart-icon" class="ti-shopping-cart text-secondary"></i>
+                        </a> 
                     </div>
-                </a>
+                </div>
+    
+                <div class="header-btn account">
+                    <a href="">
+                        <div class="nav-item dropdown account-icon">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                                <i id="user-icon" class="ti-user text-secondary"></i>
+                            </a>
+                            <ul class="dropdown-menu account-dropdown">
+                                <li><a class="dropdown-item text-secondary" href="login.html">Đăng Nhập</a></li>
+                                <li><a class="dropdown-item text-secondary" href="signup.html">Đăng Ký</a></li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
             </div>
+            
         </div>
     </header>
     <!--End Header-->
@@ -199,27 +211,63 @@
             </div>
         </div>
     </footer>
+    
+    <button class="to-top" href="#"><i class="ti-angle-double-up"></i></button>
+    <button class="contact-btn" href="#"><a href="contact.html"><i class="ti-headphone-alt"></i></a></button>
+    <!--Footer-->
+    <footer class="">
+            <div class="row">
+            <div class="col">
+                <h3 class="footer-tittle">Giới Thiệu</h3>
+                <p class="">
+                    <b>Nông Sản Việt</b> là hành trình của những bạn trẻ nhiệt huyết, đến từ những miền quê khác nhau, kiên trì dấn thân để cùng nhau góp phần cải thiện chuỗi cung ứng nông sản Việt và mang thực phẩm an tâm đến cho cộng đồng.
+                </p>
+            </div>
+    
+            <div class="col contact-info">
+                <h3 class="footer-tittle">Thông Tin Liên Hệ</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <i class="ti-headphone-alt"> </i>
+                        <i>0999 234 567</i>
+                    </li>
+                    <li class="list-group-item">
+                        <i class="ti-email"> </i>
+                        <i>nongsanviet@gmail.com</i>
+                    </li>
+                    <li class="list-group-item">
+                        <i class="ti-location-arrow"> </i>
+                        <i>Trường CNTT&TT - Đại học Cần Thơ</i>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="col">
+                <img src="./img/logo.png" alt="">
+                <p class="copyright text-center">Nông Sản Việt © 2024. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
     <!--End Footer-->
-
+    
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="assets/js/dropdown.js"></script>
 <script>
     const toTopBtn = document.querySelector(".to-top");
     window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 50) {
+        if(window.pageYOffset > 50){
             toTopBtn.classList.add('active');
         } else {
             toTopBtn.classList.remove('active');
         }
     })
 
-    $(document).ready(function () {
-        $('.to-top').click(function () {
-            $('html, body').animate({ scrollTop: 0 }, 800);
+    $(document).ready(function(){
+        $('.to-top').click(function(){
+            $('html, body').animate({scrollTop : 0},800);
             return false;
         });
     });
-</script>
 
+</script>
 </html>
