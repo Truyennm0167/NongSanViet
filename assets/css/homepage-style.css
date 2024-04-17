@@ -6,8 +6,40 @@ html {
     scroll-behavior: smooth;
 }
 
-.slider img {
-    margin-top: 100px !important;
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#goToProduct {
+    text-align: right;
+}
+
+#goToProduct a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #71B979;
+    margin-right: 20px;
+}
+
+#goToProduct a:hover {
+    color: forestgreen;
 }
 
 .kop-list-container .col {
@@ -38,12 +70,7 @@ main h2 {
 
 .infor-container {
     margin: 10px;
-    border: 2px solid white;
     border-radius: 30px;
-}
-
-.infor-container:hover {
-    border-color: #71B979;
 }
 
 .infor {
@@ -65,15 +92,7 @@ main h2 {
     text-align: justify;
 }
 
-.hot-news-container, .today-list-container {
-    background-color: #fff;
-    padding: 20px;
-    margin: 50px;
-    border-radius: 10px;
-}
-
 .title {
-    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -96,58 +115,48 @@ main h2 {
     transform: translateX(-50%);
 }
 
-.news-list, .today-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.hot-news {
+    margin-bottom: 50px;
 }
 
-.news-item {
-    border: 2px dashed #71B979;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 10px;
-    width: calc(33.33% - 20px);
-    margin-bottom: 20px;
+.hot-news .button {
+    color: white;
+    background-color: #71B979;
+    border-radius: 30px;
+    height: 70px;
+    width: 40px;
 }
 
-.news-item img, .today-item img {
-    margin-bottom: 12px;
-    max-width: 100%;
-    border-radius: 8px;
+.hot-news .swiper-slide img {
+    display: block;
+    width: 100%;
     height: 300px;
+    object-fit: cover;
 }
 
-.news-title {
+.hot-news .swiper {
+    width: 100%;
+    height: 500px;
+    margin: 20px auto;
+}
+
+.list-title {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
-}
+}   
 
-.news-title:hover {
+.list-title:hover {
     cursor: pointer;
     color: #71B979;
 }
 
-.content {
+.list-content {
     font-size: 16px;
     line-height: 1.5;
 }
 
-.news-item div, .today-item div {
+.list-item div {
     margin-right: 10px;
     text-align: justify;
-}
-
-.today-item {
-    border: 2px solid white;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 10px;
-    width: calc(33.33% - 20px);
-    margin-bottom: 20px;
-}
-
-.today-item:hover {
-    border-color: #71B979;
 }
