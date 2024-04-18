@@ -14,6 +14,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="main.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <!--Header & Footer CSS-->
     <link rel="stylesheet" href="./assets/css/header&footer.css">
 
 </head>
@@ -46,17 +48,19 @@
             </form>
     </div>
    <!--Footer-->
-   <footer class="" style="margin-top: 0px;">
+   <button class="to-top" href="#"><i class="ti-angle-double-up"></i></button>
+    <button class="contact-btn" href="#"><a href="contact.html"><i class="ti-headphone-alt"></i></a></button>
+   <footer class="">
     <div class="row">
     <div class="col">
-        <h4 class="footer-tittle">Giới thiệu</h4>
+        <h3 class="footer-tittle">Giới Thiệu</h3>
         <p class="">
-            <b>Nông Sản Việt</b> là hành trình của những bạn trẻ nhiệt huyết, đến từ những miền quê khác nhau, kiên trì dấn thân để cùng nhau góp phần cải thiện chuỗi cung ứng nông sản Việt và mang thực phẩm an tâm đến cho cộng đồng. (de cho co)
+            <b>Nông Sản Việt</b> là hành trình của những bạn trẻ nhiệt huyết, đến từ những miền quê khác nhau, kiên trì dấn thân để cùng nhau góp phần cải thiện chuỗi cung ứng nông sản Việt và mang thực phẩm an tâm đến cho cộng đồng.
         </p>
     </div>
 
     <div class="col contact-info">
-        <h4 class="footer-tittle">Thông tin liên hệ</h4>
+        <h3 class="footer-tittle">Thông Tin Liên Hệ</h3>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
                 <i class="ti-headphone-alt"> </i>
@@ -80,5 +84,25 @@
 </div>
 </footer>
 <!--End Footer-->
+
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  const toTopBtn = document.querySelector(".to-top");
+  window.addEventListener('scroll', () => {
+  if(window.pageYOffset > 50){
+      toTopBtn.classList.add('active');
+  } else {
+      toTopBtn.classList.remove('active');
+  }
+  })
+
+  $(document).ready(function(){
+  $('.to-top').click(function(){
+      $('html, body').animate({scrollTop : 0},800);
+      return false;
+  });
+  });
+
+</script>
 </html>
