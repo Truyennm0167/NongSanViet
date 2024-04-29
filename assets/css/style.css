@@ -251,15 +251,13 @@ main h2 {
     padding: 5px;
     border-radius: 15px;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
-    opacity: 1;
     background-color: beige;
-    cursor: pointer;
     transition: 0.2s;
     opacity: 0;
     text-decoration: none;
-
 }
 
-.menu-filter .cell:hover {
-    background-color:azure;
+.menu-filter.active .cell:hover {
+    background-color: azure;
+    cursor: pointer;
 }

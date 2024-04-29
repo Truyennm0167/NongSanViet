@@ -132,6 +132,7 @@ const products = [
 ];
 function searchProduct() {
   const searchInput = document.getElementById('searchInput');
+  var i = 1;
   if (searchInput && searchInput.value) {
       const searchKeyword = searchInput.value.toLowerCase();
       const searchResults = products.filter(product => {
@@ -146,9 +147,9 @@ function searchProduct() {
       } else {
           searchResults.forEach(product => {
               const productHtml = `
-                  <div class="col-3 mb-5">
-                      <div class="card ms-5 mt-5 w-auto">
-                          <img src="${product.image}" class="card-img-top p-2 rounded-4" alt="${product.name}">
+                  <div class="col-3 mb-5" style="margin-top:20px;">
+                      <div class="card mt-5" style="margin-left: 30px;">
+                          <img src="${product.image}" alt="${product.name}">
                           <div class="card-body">
                               <h5 class="card-title">${product.name}</h5>
                               <p class="card-text">${product.price}</p>
@@ -157,6 +158,10 @@ function searchProduct() {
                       </div>
                   </div>
               `;
+              i += 1;
+              if(i>4){
+                i = 1;
+              }
               productList.innerHTML += productHtml;
           });
       }
