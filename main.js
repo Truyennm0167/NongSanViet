@@ -120,7 +120,7 @@ const products = [
   { name: 'Chuối già Nam Mỹ (1kg)',     category: 'trái cây', p_price: '33.000đ', discount: '21%', price: '26.000đ', rating: '3.5/5', image: 'img/poster_chuoi.jpg'},
   { name: 'Cam sành túi (0.9-1.1kg)',   category: 'trái cây', p_price: '25.000đ', discount: '20%', price: '21.000đ', rating: '4/5',   image: 'img/poster_cam.jpg'},
   
-  { name: 'Rau muống (500g)',           category: 'rau lá',   p_price: '14.000đ', discount: '12%', price: '12.000đ', rating: '4.5/5', image: 'img/poster_raumuong'},
+  { name: 'Rau muống (500g)',           category: 'rau lá',   p_price: '14.000đ', discount: '12%', price: '12.000đ', rating: '4.5/5', image: 'img/poster_raumuong.jpg'},
   { name: 'Cải ngọt (500g)',            category: 'rau lá',   p_price: '15.000đ', discount: '32%', price: '10.000đ', rating: '4/5',   image: 'img/poster_caingot.jpg'},
   { name: 'Mồng tơi (500g)',            category: 'rau lá',   p_price: '15.000đ', discount: '33%', price: '10.000đ', rating: '5/5',   image: 'img/poster_mongtoi.jpg'},
   { name: 'Xà lách (500g)',             category: 'rau lá',   p_price: '16.000đ', discount: '20%', price: '13.000đ', rating: '4/5',   image: 'img/poster_xalach.jpg'},
@@ -132,7 +132,7 @@ const products = [
   { name: 'Củ cải trắng',               category: 'củ quả',   p_price: '10.000đ', discount: '0%',  price: '10.000đ', rating: '5/5',   image: 'img/poster_cucaitrang.jpg'},
   { name: 'Su hào (500g)',              category: 'củ quả',   p_price: '16.000đ', discount: '0%',  price: '16.000đ', rating: '5/5',   image: 'img/suhao1.jpg'},
 
-  { name: 'Nấm đùi gà (200g)',          category: 'nấm',      p_price: '31.000đ', discount: '18%', price: '25.000đ', rating: '5/5',   image: 'img/poster_duiga1.jpg' },
+  { name: 'Nấm đùi gà (200g)',          category: 'nấm',      p_price: '31.000đ', discount: '18%', price: '25.000đ', rating: '5/5',   image: 'img/duiga1.jpg' },
   { name: 'Nấm linh chi (150g)',        category: 'nấm',      p_price: '33.000đ', discount: '0%',  price: '33.000đ', rating: '5/5',   image: 'img/linhchi1.jpg' },
   { name: 'Nấm hương (150g)',           category: 'nấm',      p_price: '33.000đ', discount: '15%', price: '28.000đ', rating: '4.5/5', image: 'img/namhuong1.jpg' },
   { name: 'Nấm tuyết Vietfresh (50g)',  category: 'nấm',      p_price: '30.000đ', discount: '0%',  price: '30.000đ', rating: '4/5',   image: 'img/namtuyet1.jpg' },
@@ -161,7 +161,14 @@ function searchProduct() {
                           <img src="${product.image}" alt="${product.name}">
                           <div class="card-body">
                               <h5 class="card-title">${product.name}</h5>
-                              <p class="card-text">${product.price}</p>
+                              <p class="card-text" style="text-decoration:line-through;">${product.p_price}</p>
+                              <div class="discount" style="margin-top: -10px;" style="margin-top: -10px;">
+                                    <p style="display: inline;">${product.price}</p>
+                                    <p style="display: inline; background-color: red; color: white; padding: 2px; align-items: center; margin-left: 3px;">${product.discount}</p>
+                                </div>
+                                <div class="star-rating" style="padding-top: 5px;" style="padding-top: 5px;">
+                                    ${product.rating}<span class="material-symbols-outlined">grade</span>
+                                </div>
                               <button class="btn btn-success">Thêm vào giỏ hàng</button>
                           </div>
                       </div>
