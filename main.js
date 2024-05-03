@@ -97,9 +97,14 @@ function singup() {
     }
     // Nếu kiểm tra tất cả thành công, cho phép đăng nhập
     if(email == data.email  && password == data.password){
-        alert("Đăng nhập thành công")
-        window.location.href="index.html";
-        }
+      if(email == 'admin@gmail.com'){
+        alert("Bạn đã đăng nhập dưới quyền Admin");
+        window.location.href="Admin/dashboard.html";
+      } else {
+        alert("Đăng nhập thành công");
+        window.location.href="index.html";  
+      }
+    } 
     return true;
   }
   function cancel() {
