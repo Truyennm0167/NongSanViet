@@ -97,9 +97,14 @@ function singup() {
     }
     // Nếu kiểm tra tất cả thành công, cho phép đăng nhập
     if(email == data.email  && password == data.password){
-        alert("Đăng nhập thành công")
-        window.location.href="index.html";
-        }
+      if(email == 'admin@gmail.com'){
+        alert("Bạn đã đăng nhập dưới quyền Admin");
+        window.location.href="Admin/dashboard.html";
+      } else {
+        alert("Đăng nhập thành công");
+        window.location.href="index.html";  
+      }
+    } 
     return true;
   }
   function cancel() {
@@ -114,20 +119,29 @@ function singup() {
 
 
 const products = [
-  { name: 'Ổi trân châu ruột đỏ',       category: 'trái cây', price: '21.000đ', image: 'img/poster_oi.jpg' },
-  { name: 'Xoài keo',     category: 'trái cây', price: '21.000đ', image: 'img/poster_xoai.jpg'},
-  { name: 'Dưa hấu',  category: 'trái cây', price: '21.000đ', image: 'img/poster_duahau.jpg'},
-  { name: 'Chuối già Nam Mỹ', category: 'trái cây', price: '21.000đ', image: 'img/poster_chuoi.jpg'},
-  { name: 'Cam sành', category: 'trái cây', price: '21.000đ', image: 'img/poster_cam.jpg'},
+  { name: 'Ổi trân châu ruột đỏ (1kg)', category: 'trái cây', p_price: '31.000đ', discount: '40%', price: '19.000đ', rating: '4/5',   image: 'img/poster_oi.jpg' },
+  { name: 'Xoài keo (2-3 trái)',        category: 'trái cây', p_price: '25.000đ', discount: '28%', price: '18.000đ', rating: '4.5/5', image: 'img/poster_xoai.jpg'},
+  { name: 'Dưa hấu đỏ (1.8kg)',         category: 'trái cây', p_price: '38.000đ', discount: '11%', price: '34.000đ', rating: '5/5',   image: 'img/poster_duahau.jpg'},
+  { name: 'Chuối già Nam Mỹ (1kg)',     category: 'trái cây', p_price: '33.000đ', discount: '21%', price: '26.000đ', rating: '3.5/5', image: 'img/poster_chuoi.jpg'},
+  { name: 'Cam sành túi (0.9-1.1kg)',   category: 'trái cây', p_price: '25.000đ', discount: '20%', price: '21.000đ', rating: '4/5',   image: 'img/poster_cam.jpg'},
   
-  { name: '', category: 'rau củ', price: '21.000đ', image: 'img/poster_cam.jpg'},
-  { name: 'cam', category: 'rau củ', price: '21.000đ', image: 'img/poster_cam.jpg'},
-  { name: 'cam', category: 'rau củ', price: '21.000đ', image: 'img/poster_cam.jpg'},
-  { name: 'cam', category: 'rau củ', price: '21.000đ', image: 'img/poster_cam.jpg'},
-  { name: 'cam', category: 'rau củ', price: '21.000đ', image: 'img/poster_cam.jpg'},
+  { name: 'Rau muống (500g)',           category: 'rau lá',   p_price: '14.000đ', discount: '12%', price: '12.000đ', rating: '4.5/5', image: 'img/poster_raumuong.jpg'},
+  { name: 'Cải ngọt (500g)',            category: 'rau lá',   p_price: '15.000đ', discount: '32%', price: '10.000đ', rating: '4/5',   image: 'img/poster_caingot.jpg'},
+  { name: 'Mồng tơi (500g)',            category: 'rau lá',   p_price: '15.000đ', discount: '33%', price: '10.000đ', rating: '5/5',   image: 'img/poster_mongtoi.jpg'},
+  { name: 'Xà lách (500g)',             category: 'rau lá',   p_price: '16.000đ', discount: '20%', price: '13.000đ', rating: '4/5',   image: 'img/poster_xalach.jpg'},
+  { name: 'Hành lá (100g)',             category: 'rau lá',   p_price: '7.000đ',  discount: '5%',  price: '7.000đ',  rating: '4/5',   image: 'img/poster_hanhla.jpg'},
 
-  { name: 'Nấm đông cô', category: 'nấm', price: '21.000đ', image: 'img/poster_namdongco.jpg' },
-  { name: 'Nấm Linh Chi', category: 'nấm', price: '21.000đ', image: 'img/linhchi1.jpg' },
+  { name: 'Cà rốt (500g)',              category: 'củ quả',   p_price: '10.000đ', discount: '0%',  price: '10.000đ', rating: '3/5',   image: 'img/carot1.jpg'},
+  { name: 'Hành tây (500g)',            category: 'củ quả',   p_price: '18.000đ', discount: '0%',  price: '18.000đ', rating: '4/5',   image: 'img/poster_cuhanhtay.jpg'},
+  { name: 'Khoai tây (500g)',           category: 'củ quả',   p_price: '15.000đ', discount: '0%',  price: '15.000đ', rating: '4.5/5', image: 'img/poster_khoaitay.jpg'},
+  { name: 'Củ cải trắng',               category: 'củ quả',   p_price: '10.000đ', discount: '0%',  price: '10.000đ', rating: '5/5',   image: 'img/poster_cucaitrang.jpg'},
+  { name: 'Su hào (500g)',              category: 'củ quả',   p_price: '16.000đ', discount: '0%',  price: '16.000đ', rating: '5/5',   image: 'img/suhao1.jpg'},
+
+  { name: 'Nấm đùi gà (200g)',          category: 'nấm',      p_price: '31.000đ', discount: '18%', price: '25.000đ', rating: '5/5',   image: 'img/duiga1.jpg' },
+  { name: 'Nấm linh chi (150g)',        category: 'nấm',      p_price: '33.000đ', discount: '0%',  price: '33.000đ', rating: '5/5',   image: 'img/linhchi1.jpg' },
+  { name: 'Nấm hương (150g)',           category: 'nấm',      p_price: '33.000đ', discount: '15%', price: '28.000đ', rating: '4.5/5', image: 'img/namhuong1.jpg' },
+  { name: 'Nấm tuyết Vietfresh (50g)',  category: 'nấm',      p_price: '30.000đ', discount: '0%',  price: '30.000đ', rating: '4/5',   image: 'img/namtuyet1.jpg' },
+  { name: 'Nấm linh chi nâu 150g',      category: 'nấm',      p_price: '33.000đ', discount: '0%',  price: '33.000đ', rating: '3/5',   image: 'img/linhchinau1.jpg' },
   // Thêm các sản phẩm khác vào đây
 ];
 function searchProduct() {
@@ -152,7 +166,14 @@ function searchProduct() {
                           <img src="${product.image}" alt="${product.name}">
                           <div class="card-body">
                               <h5 class="card-title">${product.name}</h5>
-                              <p class="card-text">${product.price}</p>
+                              <p class="card-text" style="text-decoration:line-through;">${product.p_price}</p>
+                              <div class="discount" style="margin-top: -10px;" style="margin-top: -10px;">
+                                    <p style="display: inline;">${product.price}</p>
+                                    <p style="display: inline; background-color: red; color: white; padding: 2px; align-items: center; margin-left: 3px;">${product.discount}</p>
+                                </div>
+                                <div class="star-rating" style="padding-top: 5px;" style="padding-top: 5px;">
+                                    ${product.rating}<span class="material-symbols-outlined">grade</span>
+                                </div>
                               <button class="btn btn-success">Thêm vào giỏ hàng</button>
                           </div>
                       </div>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/products.css">
+    <!-- link boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <input type="checkbox" id="nav-toggle" />
+    <!-- left -->
+    <div class="sidebar">
+      <head>
+        <div class="image-text">
+          <span class="image">
+             <img src="image/logo.jpg" alt="logo">
+          </span>
+        </div>
+      </head>
+      <div class="menu">
+        <ul class="menu-links">
+          <li class="dashboard-link">
+              <a href="dashboard.html">
+                 <i class='bx bxs-dashboard icon'></i>
+                 <span class="text nav-text">Dashboard</span>
+              </a>
+          </li>
+          <li class="product-link">
+              <a href="products.html">
+                  <i class='bx bx-store icon'></i>
+                 <span class="text nav-text">Sản Phẩm</span>
+              </a>
+          </li>
+          <li class="nav-link">
+              <a href="invoice.html">
+                <i class='bx bx-cart icon' ></i>
+                 <span class="text nav-text">Đơn Hàng</span>
+              </a>
+          </li>
+          <li style="float: bottom;" class="bottom-content">
+              <a href="login.html">  
+                <i class='bx bx-log-out icon'></i>
+                 <span class="text nav-text">Đăng xuất </span>
+              </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <section class="product">
+      <div class="top">
+        <i class='bx bx-menu sidebar-toggle'></i>
+        <i class='bx bxs-user-circle logo' >
+        <i class='bx bx-bell'></i>
+        <i class='bx bx-envelope'></i>
+          </i>
+        </div>
+      <div class="product-contents ">
+   
+        <div class="recent-gird">
+          <div class="projects">
+            <div class="card">
+              <div class="card-header">
+                  <h2>Quản lý Sản Phẩm  </h2>
+                <div>
+                </div>
+                <button
+                  style="margin: 12px 0; height: 3rem; width: 5rem"
+                  class="trigger"
+                >
+                  + Thêm
+                </button>
+              </div>
+              <div class="card-body">
+                <table>
+                  <thead>
+                    <tr>
+                      <td>Mã S.P</td>
+                      <td>Tên S.Phẩm</td>
+                      <td>Hình ảnh</td>
+                      <td>Danh mục</td>
+                      <td>Giá</td>
+                      <td>Số lượng</td>
+                      <td class="td">Tùy chỉnh</td>
+                    </tr>
+                  </thead>
+                  <tbody style="background-color: white">
+                    <tr class="product-item">
+                      <td>A012</td>
+                      <td>Bắp cải</td>
+                      <td style="width: 20%; height: 20%; text-align: center">
+                        <img
+                          src="image/bapcai1.jpg"
+                          style="width: 100%"
+                          alt=""
+                          srcset=""
+                        />
+                      </td>
+                      <td>Rau</td>
+                      <td>35.000đ</td>
+                      <td class="quantity">133</td>
+                      <td>
+                        <button> <i class='bx bx-pencil edit-button'></i></button>
+                        <button><i class='bx bx-trash delete-button' ></i></button>
+                      </td>
+                    </tr>
+
+                    <tr class="product-item">
+                      <td>MC10</td>
+                      <td>Cam</td>
+
+                      <td style="width: 20%; height: 20%; text-align: center">
+                        <img
+                          src="image/cam1.jpg"
+                          style="width: 100%"
+                          alt=""
+                          srcset=""
+                        />
+                      </td>
+
+                      <td>Trái cây</td>
+                      <td>25.000đ</td>
+                      <td class="quantity">130</td>
+                      <td class="td">
+                        <button> <i class='bx bx-pencil edit-button'></i></button>
+                        <button><i class='bx bx-trash delete-button' ></i></button>
+                      </td>
+                    </tr>
+                    <tr class="product-item">
+                      <td>MD11</td>
+                      <td>Nấm Linh Chi</td>
+                      <td style="width: 20%; height: 20%; text-align: center">
+                        <img
+                          src="image/linhchi2.jpg"
+                          style="width: 100%"
+                          alt=""
+                          srcset=""
+                        />
+                      </td>
+
+
+                      <td>Nấm</td>
+                      <td>25.000đ</td>
+                      <td class="quantity">87</td>
+                      <td class="td">
+                        <button> <i class='bx bx-pencil edit-button'></i></button>
+                        <button><i class='bx bx-trash delete-button' ></i></button>
+                      </td>
+                    </tr>
+                    <tr class="product-item">
+                      <td>AA11</td>
+                      <td>Chuối</td>
+                      <td style="width: 20%; height: 20%; text-align: center">
+                        <img
+                          src="image/chuoi3.jpg"
+                          style="width: 100%"
+                          alt=""
+                          srcset=""
+                        />
+                      </td>
+
+                      <td>trái cây</td>
+                      <td>20.000đ</td>
+                      <td class="quantity">77</td>
+                      <td class="td">
+                        <button> <i class='bx bx-pencil edit-button'></i></button>
+                        <button><i class='bx bx-trash delete-button' ></i></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="modal">
+                <div class="modal-content">
+                  <form action="">
+                  <span class="close-button">&times;</span>
+                  <h2>Thêm Sản Phẩm</h2>
+                  <p>Danh mục</p>
+                  <select name="" id="">
+                    <option value="" style="text-align: start">--Chọn--</option>
+                    <option value="" style="text-align: start">Trái Cây</option>
+                    <option value="" style="text-align: start">Nấm</option>
+                    <option value="" style="text-align: start">Rau,Củ</option>
+                    <option value="" style="text-align: start;">Rau</option>
+                  </select>
+
+                  <p>Hình ảnh</p>
+                   <input type="file" accept=".img,.jpg" required>
+                  <p>Mã Sản Phẩm</p>
+                  <input type="text" />
+                  <p>Tên Sản Phẩm</p>
+                  <input type="text" />
+                  <p>Giá</p>
+                  <input type="number" />
+                  <p>Số lượng</p>
+                  <input type="number" />
+                  <div
+                    style="
+                      display: flex;
+                      gap: 0.5rem;
+                      justify-content: end;
+                      margin-top: 0.5rem;
+                    "
+                  >
+                    <button>Thêm</button>
+                    <button>Hủy</button>
+                  </div>                    
+                  </form>
+
+                </div>
+              </div>
+                <div class="add">
+                  <button><i class="fa-solid fa-chevron-left"></i></button>
+                  <button>1</button>
+                  <button>2</button>
+                  <button>...</button>
+                  <button><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="js/script.js"></script>
+</html>
