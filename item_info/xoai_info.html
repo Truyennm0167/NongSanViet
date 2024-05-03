@@ -47,12 +47,15 @@
         .product-main img {
             width: 100%;
             display: block;
+            margin-bottom: 100px;
         }
 
         .img-display {
             overflow: hidden;
             width: 400px;
             margin-left: 60px;
+            margin-top: -100px;
+            margin-bottom: 50px;
         }
 
         .img-showcase {
@@ -190,7 +193,11 @@
         }
 
         .purchase-info .buttn:first-of-type {
-            background: #256eff
+            background: #256eff;
+        }
+
+        .purchase-info .buttn:last-of-type {
+            background: #f64749;
         }
 
         .purchase-info .buttn:hover {
@@ -285,7 +292,7 @@
     <div class="product-main">
         
         <!-- Thông tin sản phẩm -->
-        <div class="card-wrapper" style="margin-top: -20px; margin-bottom: 30px;">
+        <div class="card-wrapper" style="margin-top: 30px; margin-bottom: 60px;">
             <div class="card">
                 <!-- Card left -->
                 <div class="product-imgs">
@@ -359,6 +366,8 @@
                     <div class="purchase-info">
                         <input type="number" min="0" value="1">
                         <button type="button" class="buttn">Thêm vào giỏ hàng <i class="fa fa-shopping-cart"></i>
+                        </button>
+                        <button type="button" class="buttn">Mua
                         </button>
                     </div>
                 </div>

@@ -213,6 +213,10 @@ function oi_redirect() {
   window.location.href = "item_info/oi_info.html";
 }
 
+function xoai_redirect() {
+  window.location.href = "item_info/xoai_info.html";
+}
+
 function raumuong_redirect() {
   window.location.href = "item_info/raumuong_info.html";
 }
