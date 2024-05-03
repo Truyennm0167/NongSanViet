@@ -175,3 +175,79 @@ function searchProduct() {
 function removeDiacritics(str) {
   return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
+
+function cam_redirect() {
+  window.location.href = "item_info/cam_info.html";
+}
+
+function chuoi_redirect() {
+  window.location.href = "item_info/chuoi_info.html";
+}
+
+function duahau_redirect() {
+  window.location.href = "item_info/duahau_info.html";
+}
+
+function oi_redirect() {
+  window.location.href = "item_info/oi_info.html";
+}
+
+function raumuong_redirect() {
+  window.location.href = "item_info/raumuong_info.html";
+}
+
+function caingot_redirect() {
+  window.location.href = "item_info/caingot_info.html";
+}
+
+function mongtoi_redirect() {
+  window.location.href = "item_info/mongtoi_info.html";
+}
+
+function xalach_redirect() {
+  window.location.href = "item_info/xalach_info.html";
+}
+
+function hanhla_redirect() {
+  window.location.href = "item_info/hanhla_info.html";
+}
+
+function carot_redirect() {
+  window.location.href = "item_info/carot_info.html";
+}
+
+function hanhtay_redirect() {
+  window.location.href = "item_info/hanhtay_info.html";
+}
+
+function khoaitay_redirect() {
+  window.location.href = "item_info/khoaitay_info.html";
+}
+
+function cucaitrang_redirect() {
+  window.location.href = "item_info/cucaitrang_info.html";
+}
+
+function suhao_redirect() {
+  window.location.href = "item_info/suhao_info.html";
+}
+
+function namhuong_redirect() {
+  window.location.href = "item_info/namhuong_info.html";
+}
+
+function namlinhchi_redirect() {
+  window.location.href = "item_info/namlinhchi_info.html";
+}
+
+function namlinhchinau_redirect() {
+  window.location.href = "item_info/namlinhchinau_info.html";
+}
+
+function namtuyet_redirect() {
+  window.location.href = "item_info/namtuyet_info.html";
+}
+
+function namduiga_redirect() {
+  window.location.href = "item_info/namduiga_info.html";
+}
