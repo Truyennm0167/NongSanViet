@@ -107,7 +107,7 @@ function singup() {
     } 
     return true;
   }
-  function cancel() {
+function cancel() {
     // Xóa dữ liệu trong các trường input của form
     document.getElementById('username').value ='';
     document.getElementById('email').value = '';
@@ -115,6 +115,10 @@ function singup() {
     document.getElementById('pre-pwd').value = '';
     return false;
 }
+function turnback(){
+  window.location.href="index.html";
+}
+
 
 
 
