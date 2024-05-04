@@ -20,7 +20,21 @@
     
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/header&footer.css">
+    <style>
+        img{
+            width: 50%;
+        }
+        input{
+            width: 40%;
+        }
+        button:hover{
+            color:rgb(255, 254, 254);
+            background-color: rgb(245, 82, 82);
+        }
+    </style>
+    <script src="main.js"></script>
 </head>
+
 <body>
 
     <!--Header-->
@@ -38,7 +52,7 @@
                     </li>
                 </ul>
                 <div>
-                    <img id="logo" src="./img/logo.png" alt="">
+                    <img style="width: 100%;" id="logo" src="./img/logo.png" alt="">
                 </div>
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -80,13 +94,24 @@
     <!--End Header-->
 
     <main>
-        
-
-
-
-
-
-
+    <div class="container">    
+        <table class="table" id="cart">
+            <thead>
+              <tr>
+                <th class="col-2">Tên</th>
+                <th class="col-2">Loại</th>
+                <th class="col-2">hình ảnh <img src="" alt=""></th>  
+                <th class="col-2">giá</th>
+                <th class="col-1">số lượng</th>
+                <th class="col-1">thao tác</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <b style="text-align: right;"><p id="total">Tổng tiền:0đ</p></b>
+         
+    </div>
     </main>
     
     <button class="to-top" href="#"><i class="ti-angle-double-up"></i></button>
@@ -118,9 +143,8 @@
                     </li>
                 </ul>
             </div>
-    
             <div class="col">
-                <img src="./img/logo.png" alt="">
+                <img style="width: 40%;" src="./img/logo.png" alt="">
                 <p class="copyright text-center">Nông Sản Việt © 2024. All rights reserved.</p>
             </div>
         </div>
@@ -145,6 +169,6 @@
             return false;
         });
     });
-
 </script>
+
 </html>

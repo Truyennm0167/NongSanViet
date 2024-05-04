@@ -120,7 +120,10 @@ function turnback(){
 }
 
 
+const giohang =[
+  { name: 'Ổi trân châu ruột đỏ (1kg)', category: 'trái cây', p_price: '31.000đ', discount: '40%', price: '19.000đ', rating: '4/5',   image: 'img/poster_oi.jpg' }
 
+];
 
 const products = [
   { name: 'Ổi trân châu ruột đỏ (1kg)', category: 'trái cây', p_price: '31.000đ', discount: '40%', price: '19.000đ', rating: '4/5',   image: 'img/poster_oi.jpg' },
@@ -279,4 +282,126 @@ function namtuyet_redirect() {
 
 function namduiga_redirect() {
   window.location.href = "item_info/namduiga_info.html";
+}
+const cart = [];
+document.addEventListener("DOMContentLoaded", function() {
+  if(localStorage.getItem("cart")) {
+      const cart = JSON.parse(localStorage.getItem("cart"));
+      const cartTable = document.getElementById("cart");
+      let total = 0;
+      cart.forEach(function(item) {
+          const row = cartTable.insertRow(-1);
+          const nameCell = row.insertCell(0);
+          const categoryCell = row.insertCell(1);
+          const imageCell = row.insertCell(2);
+          const priceCell = row.insertCell(3);
+          const quantityCell = row.insertCell(4);
+          const removeCell = row.insertCell(5);
+
+          nameCell.textContent = item.name;
+          priceCell.textContent = item.price;
+          categoryCell.textContent= item.category;
+
+          const quantityInput = document.createElement("input");
+          quantityInput.type = "number";
+          quantityInput.value = 1; // Mặc định số lượng là 1
+          quantityInput.min = 1; // Số lượng tối thiểu là 1
+          quantityInput.oninput = function() {
+            updateCartItemTotal(row, item.price);
+          };
+          quantityCell.appendChild(quantityInput);
+
+          const img = document.createElement("img");
+          img.src = item.image;
+          imageCell.appendChild(img);
+
+          const removeButton = document.createElement("button");
+          removeButton.textContent = "Xóa";
+          removeButton.onclick = function() {
+              removeCartItem(row);
+              updateTotal();
+          };
+          removeCell.appendChild(removeButton);
+
+          // Cập nhật tổng tiền
+          total += item.price;
+      });
+      document.getElementById("total").textContent = "Tổng tiền:" + total + "đ";
+  }
+});
+function removeCartItem(row) {
+  const cartTable = document.getElementById("cart");
+  const rowIndex = row.rowIndex;
+  cartTable.deleteRow(rowIndex);
+  let cart = JSON.parse(localStorage.getItem("cart"));
+  cart.splice(rowIndex - 1, 1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateTotal();
+}
+
+// Hàm để thêm sản phẩm vào giỏ hàng
+function addToCart(name,category, image, price) {
+  const item = {
+      name: name,
+      category:category,
+      image: image ,
+      price: price
+  };
+
+  // Kiểm tra xem đã có giỏ hàng trong LocalStorage chưa
+  let cart = [];
+  if(localStorage.getItem("cart")) {
+      cart = JSON.parse(localStorage.getItem("cart"));
+      for(let i = 0; i < cart.length; i++) {
+        if(cart[i].name === name) {
+            alert("Sản phẩm đã có trong giỏ hàng!");
+            return;
+        }
+    }
+  }
+
+  cart.push(item);
+
+  // Lưu giỏ hàng mới vào LocalStorage
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  const cartTable = document.getElementById("cart");
+  const row = cartTable.insertRow(-1);
+  const nameCell = row.insertCell(0);
+  const categoryCell = row.insertCell(1);
+  const imageCell = row.insertCell(2);
+  const priceCell = row.insertCell(3);
+  const quantityCell = row.insertCell(4);
+  const removeCell = row.insertCell(5);
+
+  nameCell.textContent = item.name;
+  priceCell.textContent = item.price;
+
+  const quantityInput = document.createElement("input");
+  quantityInput.type = "number";
+  quantityInput.value = 1; // Mặc định số lượng là 1
+  quantityInput.min = 1; // Số lượng tối thiểu là 1
+  quantityInput.oninput = function() {
+    updateCartItemTotal(row, item.price);
+  };
+  quantityCell.appendChild(quantityInput);
+  
+  // Tạo một thẻ hình ảnh và thiết lập src
+  const img = document.createElement("img");
+  img.src = image;
+  img.alt = name;
+  img.classList.add("product-image");
+  imageCell.appendChild(img);
+
+  // Tạo nút xóa sản phẩm
+  const removeButton = document.createElement("button");
+  removeButton.textContent = "Xóa";
+  removeButton.onclick = function() {
+      removeCartItem(row);
+      updateTotal();
+  };
+  removeCell.appendChild(removeButton);
+
+  // Cập nhật lại tổng tiền
+  updateTotal();
 }
