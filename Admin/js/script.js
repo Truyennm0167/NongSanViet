@@ -35,13 +35,12 @@ document.addEventListener('DOMContentLoaded', function() {
             var quantityElement = this.closest('.product-item').querySelector('.quantity');
             var currentQuantity = parseInt(quantityElement.textContent);
             var newQuantity = prompt('Nhập số lượng mới:', currentQuantity);
-            if (newQuantity !== null) {
-                if (!isNaN(newQuantity)) {
-                    quantityElement.textContent = parseInt(newQuantity);
-                } else {
+            if (newQuantity >0 && !isNaN(newQuantity) && newQuantity < 999) 
+                quantityElement.textContent = parseInt(newQuantity);
+            else {
                     alert('Vui lòng nhập một số hợp lệ.');
                 }
-            }
+            
         });
     });
 });

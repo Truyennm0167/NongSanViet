@@ -263,4 +263,18 @@ main h2 {
 }
 
 
-   
+.table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.page:first-child {
+    display: block;
+}
