@@ -73,109 +73,478 @@
                 </button>
               </div>
               <div class="card-body">
-                <table>
-                  <thead>
-                    <tr>
-                      <td>Mã S.P</td>
-                      <td>Tên S.Phẩm</td>
-                      <td>Hình ảnh</td>
-                      <td>Danh mục</td>
-                      <td>Giá</td>
-                      <td>Số lượng</td>
-                      <td class="td">Tùy chỉnh</td>
-                    </tr>
-                  </thead>
-                  <tbody style="background-color: white">
-                    <tr class="product-item">
-                      <td>A012</td>
-                      <td>Bắp cải</td>
-                      <td style="width: 20%; height: 20%; text-align: center">
-                        <img
-                          src="image/bapcai1.jpg"
-                          style="width: 100%"
-                          alt=""
-                          srcset=""
-                        />
-                      </td>
-                      <td>Rau</td>
-                      <td>35.000đ</td>
-                      <td class="quantity">133</td>
-                      <td>
-                        <button> <i class='bx bx-pencil edit-button'></i></button>
-                        <button><i class='bx bx-trash delete-button' ></i></button>
-                      </td>
-                    </tr>
+                <div class="table-container">
+                  <div class="page" id="page1">
+                      <h2>Trái Cây</h2>
+                      <table>
+                        <thead>
+                          <tr>  
+                            <td>Mã S.P</td>
+                            <td>Tên S.Phẩm</td>
+                            <td>Hình ảnh</td>
+                            <td>Giá</td>
+                            <td>Số lượng</td>
+                            <td class="td">Tùy chỉnh</td>
+                          </tr>
+                        </thead>
+                        <tbody style="background-color: white">
+                          <tr class="product-item">
+                            <td>VV12</td>
+                            <td>Ổi trân châu ruột đỏ (1kg)</td>
+                            <td style="width: 20%; height: 20%; text-align: center">
+                              <img
+                                src="image/oi1.jpg"
+                                style="width: 100%"
+                                alt=""
+                                srcset=""
+                              />
+                            </td>
+                            <td>19.000đ</td>
+                            <td class="quantity">133</td>
+                            <td>
+                              <button> <i class='bx bx-pencil edit-button'></i></button>
+                              <button><i class='bx bx-trash delete-button' ></i></button>
+                            </td>
+                          </tr>
+                      
+                          <tr class="product-item">
+                            <td>VV06</td>
+                            <td>Xoài keo (2-3 trái)</td>
+                      
+                            <td style="width: 20%; height: 20%; text-align: center">
+                              <img
+                                src="image/xoai1.jpg"
+                                style="width: 100%"
+                                alt=""
+                                srcset=""
+                              />
+                            </td>
+                            <td>18.000đ</td>
+                            <td class="quantity">130</td>
+                            <td class="td">
+                              <button> <i class='bx bx-pencil edit-button'></i></button>
+                              <button><i class='bx bx-trash delete-button' ></i></button>
+                            </td>
+                          </tr>
+                          <tr class="product-item">
+                            <td>VV06</td>
+                            <td>Chuối già Nam Mỹ (1kg)</td>
+                      
+                            <td style="width: 20%; height: 20%; text-align: center">
+                              <img
+                                src="image/chuoi1.jpg"
+                                style="width: 100%"
+                                alt=""
+                                srcset=""
+                              />
+                            </td>
+                            <td>26.000đ</td>
+                            <td class="quantity">130</td>
+                            <td class="td">
+                              <button> <i class='bx bx-pencil edit-button'></i></button>
+                              <button><i class='bx bx-trash delete-button' ></i></button>
+                            </td>
+                          </tr>
+                          <tr class="product-item">
+                            <td>VV17</td>
+                            <td>Dưa hấu đỏ (1.8kg)</td>
+                            <td style="width: 20%; height: 20%; text-align: center">
+                              <img
+                                src="image/dauhau1.jpg"
+                                style="width: 100%"
+                                alt=""
+                                srcset=""
+                              />
+                            </td>
+                            <td>34.000đ</td>
+                            <td class="quantity">87</td>
+                            <td class="td">
+                              <button> <i class='bx bx-pencil edit-button'></i></button>
+                              <button><i class='bx bx-trash delete-button' ></i></button>
+                            </td>
+                          </tr>
+                          <tr class="product-item">
+                            <td>VV78</td>
+                            <td>Cam sành túi (0.9-1.1kg)</td>
+                            <td style="width: 20%; height: 20%; text-align: center">
+                              <img
+                                src="image/cam1.jpg"
+                                style="width: 100%"
+                                alt=""
+                                srcset=""
+                              />
+                            </td> 
+                            <td>21.000đ</td>
+                            <td class="quantity">77</td>
+                            <td class="td">
+                              <button> <i class='bx bx-pencil edit-button'></i></button>
+                              <button><i class='bx bx-trash delete-button' ></i></button>
+                            </td>
+                          </tr>
+                        
+                        </tbody>
+                      </table>
+                      <div class="add" style="text-align: right;">
+                        <button onclick="goToPage(2)">Đi đến Trang 2</button>
+                      </div>
+                      
+                  </div>
+                  <div style="display: none;" class="page" id="page2">
+                      <h2>Rau lá</h2>
+                      <table>
+                        <thead>
+                          <tr>
+                            <td>Mã S.P</td>
+                            <td>Tên S.Phẩm</td>
+                            <td>Hình ảnh</td>
+                            <td>Giá</td>
+                            <td>Số lượng</td>
+                            <td class="td">Tùy chỉnh</td>
+                          </tr>
+                        </thead>
+                        <tbody style="background-color: white">
+                          <tr class="product-item">
+                            <td>AA12</td>
+                            <td>Rau muống (500g)</td>
+                            <td style="width: 20%; height: 20%; text-align: center">
+                              <img
+                                src="image/raumuong1.jpg"
+                                style="width: 100%"
+                                alt=""
+                                srcset=""
+                              />
+                            </td>
+                            <td>12.000đ</td>
+                            <td class="quantity">54</td>
+                            <td>
+                              <button> <i class='bx bx-pencil edit-button'></i></button>
+                              <button><i class='bx bx-trash delete-button' ></i></button>
+                            </td>
+                          </tr>
+                      
+                          <tr class="product-item">
+                            <td>AA33</td>
+                            <td>Cải ngọt (500g)</td>
+                      
+                            <td style="width: 20%; height: 20%; text-align: center">
+                              <img
+                                src="image/Caingot1.jpg"
+                                style="width: 100%"
+                                alt=""
+                                srcset=""
+                              />
+                            </td>
+                            <td>10.000đ</td>
+                            <td class="quantity">50</td>
+                            <td class="td">
+                              <button> <i class='bx bx-pencil edit-button'></i></button>
+                              <button><i class='bx bx-trash delete-button' ></i></button>
+                            </td>
+                          </tr>
+                          <tr class="product-item">
+                            <td>AA77</td>
+                            <td>Mồng Tơi (500g)</td>
+                            <td style="width: 20%; height: 20%; text-align: center">
+                              <img
+                                src="image/mongtoi1.jpg"
+                                style="width: 100%"
+                                alt=""
+                                srcset=""
+                              />
+                            </td>
+                            <td>10.000đ</td>
+                            <td class="quantity">33</td>
+                            <td class="td">
+                              <button> <i class='bx bx-pencil edit-button'></i></button>
+                              <button><i class='bx bx-trash delete-button' ></i></button>
+                            </td>
+                          </tr>
+                          <tr class="product-item">
+                            <td>AA11</td>
+                            <td>Xà lách (500g)</td>
+                            <td style="width: 20%; height: 20%; text-align: center">
+                              <img
+                                src="image/xalach1.jpg"
+                                style="width: 100%"
+                                alt=""
+                                srcset=""
+                              />
+                            </td>
+                            <td>13.000đ</td>
+                            <td class="quantity">77</td>
+                            <td class="td">
+                              <button> <i class='bx bx-pencil edit-button'></i></button>
+                              <button><i class='bx bx-trash delete-button' ></i></button>
+                            </td>
+                          </tr>
+                          <tr class="product-item">
+                            <td>AA11</td>
+                            <td>Hành lá(50g)</td>
+                            <td style="width: 20%; height: 20%; text-align: center">
+                              <img
+                                src="image/hanhla1.jpg"
+                                style="width: 100%"
+                                alt=""
+                                srcset=""
+                              />
+                            </td>
+                            <td>7.000đ</td>
+                            <td class="quantity">77</td>
+                            <td class="td">
+                              <button> <i class='bx bx-pencil edit-button'></i></button>
+                              <button><i class='bx bx-trash delete-button' ></i></button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="add" style="align-items: center;
+                      display: flex;
+                      justify-content: space-between;">
+                        <button onclick="goToPage(1)">Quay lại Trang 1</button>
+                      <button onclick="goToPage(3)">Đi đến Trang 3</button>                
+                      </div>
 
-                    <tr class="product-item">
-                      <td>MC10</td>
-                      <td>Cam</td>
+                  </div>
+                  <div style="display: none;" class="page" id="page3">
+                      <h2>Củ quả</h2>
+                      <table>
+                        <thead>
+                          <tr>
+                            <td>Mã S.P</td>
+                            <td>Tên S.Phẩm</td>
+                            <td>Hình ảnh</td>
+                            <td>Giá</td>
+                            <td>Số lượng</td>
+                            <td class="td">Tùy chỉnh</td>
+                          </tr>
+                        </thead>
+                        <tbody style="background-color: white">
+                          <tr class="product-item">
+                            <td>LL21</td>
+                            <td>Cà rốt ( 500g)</td>
+                            <td style="width: 20%; height: 20%; text-align: center">
+                              <img
+                                src="image/carot1.jpg"
+                                style="width: 100%"
+                                alt=""
+                                srcset=""
+                              />
+                            </td>
+                            <td>10.000đ</td>
+                            <td class="quantity">54</td>
+                            <td>
+                              <button> <i class='bx bx-pencil edit-button'></i></button>
+                              <button><i class='bx bx-trash delete-button' ></i></button>
+                            </td>
+                          </tr>
+                      
+                          <tr class="product-item">
+                            <td>LL23</td>
+                            <td>Hành tây (500g)</td>
+                      
+                            <td style="width: 20%; height: 20%; text-align: center">
+                              <img
+                                src="image/hanhtay1.jpg"
+                                style="width: 100%"
+                                alt=""
+                                srcset=""
+                              />
+                            </td>
+                            <td>18.000đ</td>
+                            <td class="quantity">50</td>
+                            <td class="td">
+                              <button> <i class='bx bx-pencil edit-button'></i></button>
+                              <button><i class='bx bx-trash delete-button' ></i></button>
+                            </td>
+                          </tr>
+                          <tr class="product-item">
+                            <td>LL77</td>
+                            <td>Khoai tây (500g)</td>
+                            <td style="width: 20%; height: 20%; text-align: center">
+                              <img
+                                src="image/khoaitay1.jpg"
+                                style="width: 100%"
+                                alt=""
+                                srcset=""
+                              />
+                            </td>
+                            <td>15.000đ</td>
+                            <td class="quantity">33</td>
+                            <td class="td">
+                              <button> <i class='bx bx-pencil edit-button'></i></button>
+                              <button><i class='bx bx-trash delete-button' ></i></button>
+                            </td>
+                          </tr>
+                          <tr class="product-item">
+                            <td>LL11</td>
+                            <td>Củ cải trắng (500g)</td>
+                            <td style="width: 20%; height: 20%; text-align: center">
+                              <img
+                                src="image/cucaitrang1.jpg"
+                                style="width: 100%"
+                                alt=""
+                                srcset=""
+                              />
+                            </td>
+                            <td>10.000đ</td>
+                            <td class="quantity">27</td>
+                            <td class="td">
+                              <button> <i class='bx bx-pencil edit-button'></i></button>
+                              <button><i class='bx bx-trash delete-button' ></i></button>
+                            </td>
+                          </tr>
+                          <tr class="product-item">
+                            <td>LL81</td>
+                            <td>Su hào(50g)</td>
+                            <td style="width: 20%; height: 20%; text-align: center">
+                              <img
+                                src="image/suhao1.jpg"
+                                style="width: 100%"
+                                alt=""
+                                srcset=""
+                              />
+                            </td>
+                            <td>18.000đ</td>
+                            <td class="quantity">77</td>
+                            <td class="td">
+                              <button> <i class='bx bx-pencil edit-button'></i></button>
+                              <button><i class='bx bx-trash delete-button' ></i></button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="add" style="align-items: center;
+                            display: flex;
+                            justify-content: space-between;">
 
-                      <td style="width: 20%; height: 20%; text-align: center">
-                        <img
-                          src="image/cam1.jpg"
-                          style="width: 100%"
-                          alt=""
-                          srcset=""
-                        />
-                      </td>
+                      <button onclick="goToPage(2)">Quay lại Trang 2</button>
+                      <button onclick="goToPage(4)">Đi đến Trang 4</button>                
+                      </div>
 
-                      <td>Trái cây</td>
-                      <td>25.000đ</td>
-                      <td class="quantity">130</td>
-                      <td class="td">
-                        <button> <i class='bx bx-pencil edit-button'></i></button>
-                        <button><i class='bx bx-trash delete-button' ></i></button>
-                      </td>
-                    </tr>
-                    <tr class="product-item">
-                      <td>MD11</td>
-                      <td>Nấm Linh Chi</td>
-                      <td style="width: 20%; height: 20%; text-align: center">
-                        <img
-                          src="image/linhchi2.jpg"
-                          style="width: 100%"
-                          alt=""
-                          srcset=""
-                        />
-                      </td>
+                  </div>
+                  <div style="display: none;" class="page" id="page4">
+                      <h2>Nấm</h2>
+                      <table>
+                        <thead>
+                          <tr>
+                            <td>Mã S.P</td>
+                            <td>Tên S.Phẩm</td>
+                            <td>Hình ảnh</td>
+                            <td>Giá</td>
+                            <td>Số lượng</td>
+                            <td class="td">Tùy chỉnh</td>
+                          </tr>
+                        </thead>
+                        <tbody style="background-color: white">
+                          <tr class="product-item">
+                            <td>NN21</td>
+                            <td>Nấm đùi gà ( 500g)</td>
+                            <td style="width: 20%; height: 20%; text-align: center">
+                              <img
+                                src="image/duiga1.jpg"
+                                style="width: 100%"
+                                alt=""
+                                srcset=""
+                              />
+                            </td>
+                            <td>25.000đ</td>
+                            <td class="quantity">53</td>
+                            <td>
+                              <button> <i class='bx bx-pencil edit-button'></i></button>
+                              <button><i class='bx bx-trash delete-button' ></i></button>
+                            </td>
+                          </tr>
+                      
+                          <tr class="product-item">
+                            <td>NN23</td>
+                            <td>Nấm linh chi (500g)</td>
+                      
+                            <td style="width: 20%; height: 20%; text-align: center">
+                              <img
+                                src="image/linhchinau3.jpg"
+                                style="width: 100%"
+                                alt=""
+                                srcset=""
+                              />
+                            </td>
+                            <td>33.000đ</td>
+                            <td class="quantity">50</td>
+                            <td class="td">
+                              <button> <i class='bx bx-pencil edit-button'></i></button>
+                              <button><i class='bx bx-trash delete-button' ></i></button>
+                            </td>
+                          </tr>
+                          <tr class="product-item">
+                            <td>NN77</td>
+                            <td>Nấm hương (500g)</td>
+                            <td style="width: 20%; height: 20%; text-align: center">
+                              <img
+                                src="image/namhuong1.jpg"
+                                style="width: 100%"
+                                alt=""
+                                srcset=""
+                              />
+                            </td>
+                            <td>28.000đ</td>
+                            <td class="quantity">33</td>
+                            <td class="td">
+                              <button> <i class='bx bx-pencil edit-button'></i></button>
+                              <button><i class='bx bx-trash delete-button' ></i></button>
+                            </td>
+                          </tr>
+                          <tr class="product-item">
+                            <td>NN11</td>
+                            <td>Nấm tuyết Vietfresh (500g)</td>
+                            <td style="width: 20%; height: 20%; text-align: center">
+                              <img
+                                src="image/namtuyet1.jpg"
+                                style="width: 100%"
+                                alt=""
+                                srcset=""
+                              />
+                            </td>
+                            <td>30.000đ</td>
+                            <td class="quantity">97</td>
+                            <td class="td">
+                              <button> <i class='bx bx-pencil edit-button'></i></button>
+                              <button><i class='bx bx-trash delete-button' ></i></button>
+                            </td>
+                          </tr>
+                          <tr class="product-item">
+                            <td>NN81</td>
+                            <td>Nấm linh chi nâu(50g)</td>
+                            <td style="width: 20%; height: 20%; text-align: center">
+                              <img
+                                src="image/linhchinau1.jpg"
+                                style="width: 100%"
+                                alt=""
+                                srcset=""
+                              />
+                            </td>
+                            <td>33.000đ</td>
+                            <td class="quantity">77</td>
+                            <td class="td">
+                              <button> <i class='bx bx-pencil edit-button'></i></button>
+                              <button><i class='bx bx-trash delete-button' ></i></button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="add" style="text-align: left;">
 
+                      <button onclick="goToPage(3)">Quay lại Trang 3</button>              
+                      </div>
 
-                      <td>Nấm</td>
-                      <td>25.000đ</td>
-                      <td class="quantity">87</td>
-                      <td class="td">
-                        <button> <i class='bx bx-pencil edit-button'></i></button>
-                        <button><i class='bx bx-trash delete-button' ></i></button>
-                      </td>
-                    </tr>
-                    <tr class="product-item">
-                      <td>AA11</td>
-                      <td>Chuối</td>
-                      <td style="width: 20%; height: 20%; text-align: center">
-                        <img
-                          src="image/chuoi3.jpg"
-                          style="width: 100%"
-                          alt=""
-                          srcset=""
-                        />
-                      </td>
+                  </div>
+              </div>
+              
 
-                      <td>trái cây</td>
-                      <td>20.000đ</td>
-                      <td class="quantity">77</td>
-                      <td class="td">
-                        <button> <i class='bx bx-pencil edit-button'></i></button>
-                        <button><i class='bx bx-trash delete-button' ></i></button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div class="modal">
+                <div class="modal" id="myModal">
                 <div class="modal-content">
-                  <form action="">
+                  <form action="" id="addProductForm">
                   <span class="close-button">&times;</span>
                   <h2>Thêm Sản Phẩm</h2>
-                  <p>Danh mục</p>
+                  <p id="productCategory">Danh mục</p>
                   <select name="" id="">
                     <option value="" style="text-align: start">--Chọn--</option>
                     <option value="" style="text-align: start">Trái Cây</option>
@@ -185,15 +554,15 @@
                   </select>
 
                   <p>Hình ảnh</p>
-                   <input type="file" accept=".img,.jpg" required>
+                   <input id="productImage" type="file" accept=".img,.jpg" required>
                   <p>Mã Sản Phẩm</p>
                   <input type="text" />
-                  <p>Tên Sản Phẩm</p>
+                  <p id="productName">Tên Sản Phẩm</p>
                   <input type="text" />
-                  <p>Giá</p>
+                  <p id="productPrice">Giá</p>
                   <input type="number" />
-                  <p>Số lượng</p>
-                  <input type="number" />
+                  <p>Mô tả sản phẩm</p>
+                  <textarea name="" id="" cols="104" rows="5"></textarea>
                   <div
                     style="
                       display: flex;
@@ -209,13 +578,6 @@
 
                 </div>
               </div>
-                <div class="add">
-                  <button><i class="fa-solid fa-chevron-left"></i></button>
-                  <button>1</button>
-                  <button>2</button>
-                  <button>...</button>
-                  <button><i class="fa-solid fa-chevron-right"></i></button>
-                </div>
               </div> 
             </div>
           </div>
@@ -224,4 +586,19 @@
     </section>
   </body>
   <script src="js/script.js"></script>
+  <script>
+    pages = document.getElementsByClassName("page");
+function goToPage(pageNumber) {
+    // Lặp qua tất cả các tran
+    for (var i = 0; i < pages.length; i++) {
+        // Nếu là trang được chọn, hiển thị nó, ngược lại ẩn đi
+        if (i + 1 === pageNumber) {
+            pages[i].style.display = "block";
+        } else {
+            pages[i].style.display = "none";
+        }
+    }
+}
+
+  </script>
 </html>
