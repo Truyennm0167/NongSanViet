@@ -326,7 +326,7 @@ document.addEventListener("DOMContentLoaded", function() {
           // Cập nhật tổng tiền
           total += item.price;
       });
-      document.getElementById("total").textContent = "Tổng tiền:" + total + "đ";
+      document.getElementById("total").textContent = "Tổng tiền: " + total + "VNĐ";
   }
 });
 function updateCartItemTotal(row, price) {
@@ -351,7 +351,7 @@ function updateTotal() {
   }
 
   // Hiển thị tổng tiền
-  document.getElementById("total").textContent = "Tổng tiền:" + total +"đ";
+  document.getElementById("total").textContent = "Tổng tiền: " + total +"VNĐ";
 }
 function removeCartItem(row) {
   const cartTable = document.getElementById("cart");
