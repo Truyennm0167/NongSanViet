@@ -329,6 +329,30 @@ document.addEventListener("DOMContentLoaded", function() {
       document.getElementById("total").textContent = "Tổng tiền:" + total + "đ";
   }
 });
+function updateCartItemTotal(row, price) {
+  const cartTable = document.getElementById("cart");
+  const rowIndex = row.rowIndex;
+  const quantityInput = cartTable.rows[rowIndex].cells[4].querySelector("input");
+  const quantity = parseInt(quantityInput.value);
+  const totalPrice = quantity * price;
+
+  cartTable.rows[rowIndex].cells[3].textContent = totalPrice.toFixed(2);
+
+  updateTotal();
+}
+
+function updateTotal() {
+  const cartTable = document.getElementById("cart");
+  let total = 0;
+
+  for (let i = 1; i < cartTable.rows.length; i++) {
+      const price = parseFloat(cartTable.rows[i].cells[3].textContent);
+      total += price;
+  }
+
+  // Hiển thị tổng tiền
+  document.getElementById("total").textContent = "Tổng tiền: $" + total.toFixed(2);
+}
 function removeCartItem(row) {
   const cartTable = document.getElementById("cart");
   const rowIndex = row.rowIndex;
@@ -336,10 +360,8 @@ function removeCartItem(row) {
   let cart = JSON.parse(localStorage.getItem("cart"));
   cart.splice(rowIndex - 1, 1);
   localStorage.setItem("cart", JSON.stringify(cart));
-  updateTotal();
 }
 
-// Hàm để thêm sản phẩm vào giỏ hàng
 function addToCart(name,category, image, price) {
   const item = {
       name: name,
@@ -385,8 +407,6 @@ function addToCart(name,category, image, price) {
     updateCartItemTotal(row, item.price);
   };
   quantityCell.appendChild(quantityInput);
-  
-  // Tạo một thẻ hình ảnh và thiết lập src
   const img = document.createElement("img");
   img.src = image;
   img.alt = name;
@@ -402,6 +422,5 @@ function addToCart(name,category, image, price) {
   };
   removeCell.appendChild(removeButton);
 
-  // Cập nhật lại tổng tiền
   updateTotal();
 }
