@@ -261,23 +261,3 @@ main h2 {
     background-color: azure;
     cursor: pointer;
 }
-
-.buy-extra {
-    padding: ;
-}
-
-/* .button {
-    background-color: #57915e;
-    color: white;
-    border-radius: 20px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.35s;
-}
-
-.button:hover {
-    background-color: #376b3d;
-} */
