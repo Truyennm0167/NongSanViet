@@ -351,7 +351,7 @@ function updateTotal() {
   }
 
   // Hiển thị tổng tiền
-  document.getElementById("total").textContent = "Tổng tiền: $" + total.toFixed(2);
+  document.getElementById("total").textContent = "Tổng tiền:" + total +"đ";
 }
 function removeCartItem(row) {
   const cartTable = document.getElementById("cart");
