@@ -89,7 +89,7 @@
 }
 
 .product-price {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     font-size: 1rem;
     font-weight: 700;
 }
@@ -98,14 +98,20 @@
     font-weight: 400;
 }
 
-.last-price span {
-    color: #f64749;
+.last-price {
     text-decoration: line-through;
+}
+.discount {
+    background-color: #f64749;
+    color: #ddd;
+    padding: 1px;
+    text-decoration: none;
 }
 
 .new-price span {
     color: #256eff;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    font-weight: 600;
 }
 
 .product-detail h2 {
@@ -149,7 +155,7 @@
 .purchase-info input,
 .purchase-info .buttn {
     border: 1.5px solid #ddd;
-    border-radius: 25px;
+    border-radius: 10px;
     text-align: center;
     padding: 0.45rem 0.8rem;
     outline: 0;
