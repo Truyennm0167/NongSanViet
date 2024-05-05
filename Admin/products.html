@@ -40,7 +40,7 @@
               </a>
           </li>
           <li style="float: bottom;" class="bottom-content">
-              <a href="../login.html">  
+              <a href="login.html">  
                 <i class='bx bx-log-out icon'></i>
                  <span class="text nav-text">Đăng xuất </span>
               </a>
@@ -65,7 +65,7 @@
                   <h2>Quản lý Sản Phẩm  </h2>
                 <div>
                 </div>
-                <button
+                <button  onclick="openModal()"
                   style="margin: 12px 0; height: 3rem; width: 5rem"
                   class="trigger"
                 >
@@ -76,7 +76,7 @@
                 <div class="table-container">
                   <div class="page" id="page1">
                       <h2>Trái Cây</h2>
-                      <table>
+                      <table id="traicaytable">
                         <thead>
                           <tr>  
                             <td>Mã S.P</td>
@@ -191,7 +191,7 @@
                   </div>
                   <div style="display: none;" class="page" id="page2">
                       <h2>Rau lá</h2>
-                      <table>
+                      <table id="rautable">
                         <thead>
                           <tr>
                             <td>Mã S.P</td>
@@ -307,7 +307,7 @@
                   </div>
                   <div style="display: none;" class="page" id="page3">
                       <h2>Củ quả</h2>
-                      <table>
+                      <table id="cuquatable">
                         <thead>
                           <tr>
                             <td>Mã S.P</td>
@@ -424,7 +424,7 @@
                   </div>
                   <div style="display: none;" class="page" id="page4">
                       <h2>Nấm</h2>
-                      <table>
+                      <table id="namtable">
                         <thead>
                           <tr>
                             <td>Mã S.P</td>
@@ -539,45 +539,44 @@
               </div>
               
 
-                <div class="modal" id="myModal">
+              <div class="modal" id="myModal">
                 <div class="modal-content">
-                  <form action="" id="addProductForm">
-                  <span class="close-button">&times;</span>
-                  <h2>Thêm Sản Phẩm</h2>
-                  <p id="productCategory">Danh mục</p>
-                  <select name="" id="">
-                    <option value="" style="text-align: start">--Chọn--</option>
-                    <option value="" style="text-align: start">Trái Cây</option>
-                    <option value="" style="text-align: start">Nấm</option>
-                    <option value="" style="text-align: start">Rau,Củ</option>
-                    <option value="" style="text-align: start;">Rau</option>
-                  </select>
-
-                  <p>Hình ảnh</p>
-                   <input id="productImage" type="file" accept=".img,.jpg" required>
-                  <p>Mã Sản Phẩm</p>
-                  <input type="text" />
-                  <p id="productName">Tên Sản Phẩm</p>
-                  <input type="text" />
-                  <p id="productPrice">Giá</p>
-                  <input type="number" />
-                  <p>Mô tả sản phẩm</p>
-                  <textarea name="" id="" cols="104" rows="5"></textarea>
-                  <div
-                    style="
-                      display: flex;
-                      gap: 0.5rem;
-                      justify-content: end;
-                      margin-top: 0.5rem;
-                    "
-                  >
-                    <button>Thêm</button>
-                    <button>Hủy</button>
-                  </div>                    
-                  </form>
-
+                    <form action="" id="addProductForm">
+                        <span class="close-button">&times;</span>
+                        <h2>Thêm Sản Phẩm</h2>
+                        <p id="">Danh mục</p>
+                        <select name="" id="productCategory">
+                            <option value="" style="text-align: start">--Chọn--</option>
+                            <option value="traiCay" style="text-align: start">Trái Cây</option>
+                            <option value="Nam" style="text-align: start">Nấm</option>
+                            <option value="Rau" style="text-align: start">Rau lá</option>
+                            <option value="cuQua" style="text-align: start;">Củ quả</option>
+                        </select>
+            
+                        <p>Hình ảnh</p>
+                        <input id="productImageInput" type="text" placeholder="Nhập đường dẫn ảnh" required>
+                        <p>Mã Sản Phẩm</p>
+                        <input id="productIDInput" type="text" />
+                        <p id="productName">Tên Sản Phẩm</p>
+                        <input id="productNameInput" type="text" />
+                        <p id="productPrice">Giá</p>
+                        <input id="productPriceInput" type="number" />
+                        <p>số lượng sản phẩm</p>
+                        <input id="productQuantityInput" type="number" value="1" min="1">
+                        <div
+                            style="
+                            display: flex;
+                            gap: 0.5rem;
+                            justify-content: end;
+                            margin-top: 0.5rem;
+                            "
+                        >
+                            <button type="submit">Thêm</button>
+                            <button type="reset">Hủy</button>
+                        </div>
+                    </form>
                 </div>
-              </div>
+            </div>
               </div> 
             </div>
           </div>
