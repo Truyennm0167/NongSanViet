@@ -110,7 +110,7 @@
                 <div class="col-md-4 col-sm-6 mb-5">
                     <div class="search d-flex">
                         <span class="search-icon material-symbols-outlined glass" onclick="searchProduct()">search</span>
-                        <input class="search-input" id="searchInput" type="search" placeholder="Nhập loại sản phẩm" >
+                        <input class="search-input" id="searchInput" type="search" onkeypress="enter_check(e)" placeholder="Nhập loại sản phẩm" >
                     </div>
                 </div>
 
@@ -439,6 +439,7 @@
                 return false;
             });
         });
-
+        
+        
     </script>
 </html>

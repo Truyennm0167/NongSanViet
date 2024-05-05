@@ -18,23 +18,14 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     
+    <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/header&footer.css">
-    <style>
-        img{
-            width: 50%;
-        }
-        input{
-            width: 40%;
-        }
-        button:hover{
-            color:rgb(255, 254, 254);
-            background-color: rgb(245, 82, 82);
-        }
-    </style>
-    <script src="main.js"></script>
-</head>
+    <link rel="stylesheet" href="./assets/css/payment.css">
 
+    <!--Header & Footer CSS-->
+    <link rel="stylesheet" href="./assets/css/header&footer.css">
+    
+</head>
 <body>
 
     <!--Header-->
@@ -52,7 +43,7 @@
                     </li>
                 </ul>
                 <div>
-                    <img style="width: 100%;" id="logo" src="./img/logo.png" alt="">
+                    <img id="logo" src="./img/logo.png" alt="">
                 </div>
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -94,29 +85,134 @@
     <!--End Header-->
 
     <main>
-    <div class="container">    
-        <table class="table" id="cart">
-            <thead>
-              <tr>
-                <th class="col-2">Tên</th>
-                <th class="col-2">Loại</th>
-                <th class="col-2">Hình ảnh <img src="" alt=""></th>  
-                <th class="col-2">Giá</th>
-                <th class="col-1">Số lượng</th>
-                <th class="col-1"></th>
-              </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
-        <b style="text-align: right; font-size: larger;"><p id="total">Tổng tiền: 0đ</p></b>
-        <div class="d-flex justify-content-between">
-            <a href="product.html" class="btn btn-success buy-extra">Mua thêm sản phẩm</a>
-            <a href="payment.html" class="btn btn-danger">Thanh toán</a>
+        
+         <!-- Header -->
+    <div class="container">
+        <div class="form container-item">
+          <h2><b>Thông tin nhận hàng</b></h2>
+          
+           <ul>
+            <li><i class="fa-solid fa-phone"></i><b>Điện thoại:</b> 0999 234 567</li>
+            <li>
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Họ và tên *"
+                required
+              />
+            </li>
+            <li><input type="email" placeholder="Email *" required /></li>
+            <li>
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Điện thoại *"
+                required
+              />
+            </li>
+            <li>
+              <input type="text" name="" id="" placeholder="Địa chỉ *" required />
+            </li>
+            <li>
+              <textarea name="" id="" placeholder="Ghi chú (tùy chọn)"></textarea>
+            </li>
+          </ul>
         </div>
-        <br>
-        <br>
-    </div>
+        <div class="form container-item">
+          <h2 id="h22"><b>Đơn hàng</b></h2>
+  
+          <ul>
+            
+            <li class="donhang-li">
+              <input
+                type="text"
+                name=""
+                id="donhang-li-input"
+                placeholder="Mã giảm giá"
+                style="width: 55%"
+              />
+              <button>Áp dụng</button>
+            </li>
+            <li class="donhang-li">
+              <p style="text-align: start; justify-content: start">
+                Phí vận chuyển
+              </p>
+              <p>20.000VNĐ</p>
+            </li>
+            <li class="donhang-li">
+              <p
+                style="
+                  text-align: start;
+                  justify-content: start;
+  
+                  color: red;
+                "
+              >
+                Tổng cộng
+              </p>
+              <p p style="color: red">40.000VNĐ</p>
+            </li>
+  
+            <li style="text-align: center">
+              <button
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                style="width: 70%"
+              >
+                Đặt hàng
+              </button>
+            </li>
+          </ul>
+        </div>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body text-center">
+                <h3>
+                  Cảm ơn bạn đã đặt hàng tại
+                  <b style="color: #4d8a54">Nông Sản Việt</b>
+                </h3>
+                <img
+                  src="./img/logo.png"
+                  style="width: 30%; height: 30%"
+                />
+                <p>Vui lòng nạp card 50k để tiếp tục!</p>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                  style="background-color: #4d8a54; opacity: 75%"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+        
     </main>
     
     <button class="to-top" href="#"><i class="ti-angle-double-up"></i></button>
@@ -148,8 +244,9 @@
                     </li>
                 </ul>
             </div>
+    
             <div class="col">
-                <img style="width: 40%;" src="./img/logo.png" alt="">
+                <img src="./img/logo.png" alt="">
                 <p class="copyright text-center">Nông Sản Việt © 2024. All rights reserved.</p>
             </div>
         </div>
@@ -174,6 +271,6 @@
             return false;
         });
     });
-</script>
 
+</script>
 </html>

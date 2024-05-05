@@ -198,6 +198,13 @@ function searchProduct() {
       console.error('Không tìm thấy phần tử input hoặc không có giá trị nhập vào');
   }
 }
+//bat enter
+function enter_check (enter){
+  if (enter.which == 32 || enter.keyCode == 32){
+    searchProduct();
+  }
+}
+
 
 // Hàm chuyển đổi từ khóa thành dạng không dấu
 function removeDiacritics(str) {
