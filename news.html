@@ -28,6 +28,9 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/header&footer.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
@@ -87,7 +90,7 @@
     </header>
     <!--End Header-->
 
-    <div class="slider">
+    <!-- <div class="slider">
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -114,9 +117,31 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </div>
+    </div> -->
 
     <main>
+
+        <!--https://swiperjs.com-->
+        <div class="slider mb-5">
+            <div class="swiper myNewsSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/banner1.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/banner2.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/banner3.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/banner4.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-button-next" style="color: #71B979;"></div>
+                <div class="swiper-button-prev" style="color: #71B979;"></div>
+            </div>
+        </div>
 
         <div class="container">
 
@@ -283,6 +308,30 @@
     <!--End Footer-->
     
 </body>
+<style>
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slider .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     const toTopBtn = document.querySelector(".to-top");
@@ -302,4 +351,22 @@
     });
 
 </script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper Slider-->
+<script>
+    var swiper = new Swiper(".myNewsSwiper", {
+      spaceBetween: 0,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </html>
