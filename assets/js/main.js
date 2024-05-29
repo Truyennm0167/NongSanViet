@@ -115,48 +115,43 @@ function cancel() {
     document.getElementById('pre-pwd').value = '';
     return false;
 }
+
 function turnback(){
   window.location.href="index.html";
 }
-
 
 const giohang =[
   { name: 'Ổi trân châu ruột đỏ (1kg)', category: 'trái cây', p_price: '31.000đ', discount: '40%', price: '19.000đ', rating: '4/5',   image: 'img/poster_oi.jpg' }
 
 ];
 
-const products = [
-  { id: "TC001", name: 'Ổi trân châu ruột đỏ (1kg)', category: 'trái cây', p_price: '31.000đ', discount: '40%', price: '19.000đ', rating: '4/5',   image: 'img/poster_oi.jpg' },
-  { id: "TC002", name: 'Xoài keo (2-3 trái)',        category: 'trái cây', p_price: '25.000đ', discount: '28%', price: '18.000đ', rating: '4.5/5', image: 'img/poster_xoai.jpg'},
-  { id: "TC003", name: 'Dưa hấu đỏ (1.8kg)',         category: 'trái cây', p_price: '38.000đ', discount: '11%', price: '34.000đ', rating: '5/5',   image: 'img/poster_duahau.jpg'},
-  { id: "TC004", name: 'Chuối già Nam Mỹ (1kg)',     category: 'trái cây', p_price: '33.000đ', discount: '21%', price: '26.000đ', rating: '3.5/5', image: 'img/poster_chuoi.jpg'},
-  { id: "TC005", name: 'Cam sành túi (0.9-1.1kg)',   category: 'trái cây', p_price: '25.000đ', discount: '20%', price: '21.000đ', rating: '4/5',   image: 'img/poster_cam.jpg'},
-  
-  { id: "RL001", name: 'Rau muống (500g)',           category: 'rau lá',   p_price: '14.000đ', discount: '12%', price: '12.000đ', rating: '4.5/5', image: 'img/poster_raumuong.jpg'},
-  { id: "RL002", name: 'Cải ngọt (500g)',            category: 'rau lá',   p_price: '15.000đ', discount: '32%', price: '10.000đ', rating: '4/5',   image: 'img/poster_caingot.jpg'},
-  { id: "RL003", name: 'Mồng tơi (500g)',            category: 'rau lá',   p_price: '15.000đ', discount: '33%', price: '10.000đ', rating: '5/5',   image: 'img/poster_mongtoi.jpg'},
-  { id: "RL004", name: 'Xà lách (500g)',             category: 'rau lá',   p_price: '16.000đ', discount: '20%', price: '13.000đ', rating: '4/5',   image: 'img/poster_xalach.jpg'},
-  { id: "RL005", name: 'Hành lá (100g)',             category: 'rau lá',   p_price: '7.000đ',  discount: '5%',  price: '7.000đ',  rating: '4/5',   image: 'img/poster_hanhla.jpg'},
+// Load data from products.json by jQuery
+var products = [];
+$.ajax({
+  url: 'products.json',
+  dataType: 'json',
+  success: function(data) {
+    products = data;
+    console.log(data);
+  },
+  error: function(xhr, status, error) {
+    console.error('Error fetching the products:', error);
+  }
+});
+setTimeout(() => {console.log(products)}, 50)
 
-  { id: "CQ001", name: 'Cà rốt (500g)',              category: 'củ quả',   p_price: '10.000đ', discount: '0%',  price: '10.000đ', rating: '3/5',   image: 'img/carot1.jpg'},
-  { id: "CQ002", name: 'Hành tây (500g)',            category: 'củ quả',   p_price: '18.000đ', discount: '0%',  price: '18.000đ', rating: '4/5',   image: 'img/poster_cuhanhtay.jpg'},
-  { id: "CQ003", name: 'Khoai tây (500g)',           category: 'củ quả',   p_price: '15.000đ', discount: '0%',  price: '15.000đ', rating: '4.5/5', image: 'img/poster_khoaitay.jpg'},
-  { id: "CQ004", name: 'Củ cải trắng',               category: 'củ quả',   p_price: '10.000đ', discount: '0%',  price: '10.000đ', rating: '5/5',   image: 'img/poster_cucaitrang.jpg'},
-  { id: "CQ005", name: 'Su hào (500g)',              category: 'củ quả',   p_price: '16.000đ', discount: '0%',  price: '16.000đ', rating: '5/5',   image: 'img/suhao1.jpg'},
 
-  { id: "N001,", name: 'Nấm đùi gà (200g)',          category: 'nấm',      p_price: '31.000đ', discount: '18%', price: '25.000đ', rating: '5/5',   image: 'img/duiga1.jpg' },
-  { id: "N002,", name: 'Nấm linh chi (150g)',        category: 'nấm',      p_price: '33.000đ', discount: '0%',  price: '33.000đ', rating: '5/5',   image: 'img/linhchi1.jpg' },
-  { id: "N003,", name: 'Nấm hương (150g)',           category: 'nấm',      p_price: '33.000đ', discount: '15%', price: '28.000đ', rating: '4.5/5', image: 'img/namhuong1.jpg' },
-  { id: "N004,", name: 'Nấm tuyết Vietfresh (50g)',  category: 'nấm',      p_price: '30.000đ', discount: '0%',  price: '30.000đ', rating: '4/5',   image: 'img/namtuyet1.jpg' },
-  { id: "N005,", name: 'Nấm linh chi nâu 150g',      category: 'nấm',      p_price: '33.000đ', discount: '0%',  price: '33.000đ', rating: '3/5',   image: 'img/linhchinau1.jpg' },
-  // Thêm các sản phẩm khác vào đây
-];
-
-function searchProduct() {
+function searchProduct(keyWord='') {
   const searchInput = document.getElementById('searchInput');
 
   var searchResults = products;
-  if (searchInput && searchInput.value) {
+  if (keyWord != ''){
+    const searchKeyword = keyWord;
+    searchResults = products.filter(product => {
+      return removeDiacritics(product.category.toLowerCase()).includes(removeDiacritics(searchKeyword));
+    });
+  }
+  else if (searchInput && searchInput.value) {
     const searchKeyword = searchInput.value.toLowerCase();
     searchResults = products.filter(product => {
       return removeDiacritics(product.name.toLowerCase()).includes(removeDiacritics(searchKeyword)) || removeDiacritics(product.category.toLowerCase()).includes(removeDiacritics(searchKeyword));
@@ -167,7 +162,6 @@ function searchProduct() {
   const productList = document.getElementById('productList');
   productList.innerHTML = ''; // Xóa danh sách sản phẩm hiện tạ
 
-  console.log(searchResults)
   if (searchResults.length === 0) {
       productList.innerHTML = 'Không tìm thấy sản phẩm phù hợp.';
   } else {
@@ -219,41 +213,46 @@ function searchProductDetail(productId){
 function loadProductDetail(productId){
   const productMain = document.getElementsByClassName('product-main')[0];
 
+  var product = null;
+  products.forEach(p => {
+    if(p.id == productId) product = p;
+  })
+
   var productDetailInfor = `
   <div class="card-wrapper" style="margin-top: 30px; margin-bottom: 60px;">
       <div class="card">
           <div class="product-imgs">
               <div class="img-display">
                   <div class="img-showcase">
-                      <img src="img/cam1.jpg" alt="">
-                      <img src="img/cam2.jpg" alt="">
-                      <img src="img/cam3.jpg" alt="">
-                      <img src="img/cam4.jpg" alt="">
+                      <img src="${product.img1}" alt="">
+                      <img src="${product.img2}" alt="">
+                      <img src="${product.img3}" alt="">
+                      <img src="${product.img4}" alt="">
                   </div>
               </div>
 
               <div class="img-select">
                   <div class="img-item">
                       <a href="#" data-id="1">
-                          <img src="img/cam1.jpg" alt="">
+                          <img src="${product.img1}" alt="">
                       </a>
                   </div>
 
                   <div class="img-item">
                       <a href="#" data-id="2">
-                          <img src="img/cam2.jpg" alt="">
+                          <img src="${product.img2}" alt="">
                       </a>
                   </div>
 
                   <div class="img-item">
                       <a href="#" data-id="3">
-                          <img src="img/cam3.jpg" alt="">
+                          <img src="${product.img3}" alt="">
                       </a>
                   </div>
 
                   <div class="img-item">
                       <a href="#" data-id="4">
-                          <img src="img/cam4.jpg" alt="">
+                          <img src="${product.img4}" alt="">
                       </a>
                   </div>
               </div>
@@ -261,21 +260,21 @@ function loadProductDetail(productId){
 
           <!-- Card right -->
           <div class="product-content">
-              <h2 class="product-title">Cam sành túi (0.9-1.1kg)</h2>
+              <h2 class="product-title">${product.name}</h2>
               <div class="product-rating">
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star-half-o"></i>
                   <i class="fa fa-star-o"></i>
-                  <span>4.2(15)</span>
+                  <span>${product.rating}</span>
               </div>
 
               <div class="product-price">
-                  <p class="new-price"><span>18.000VNĐ</span></p>
+                  <p class="new-price"><span>${product.price}</span></p>
                   <p>
-                      <span class="last-price">25.000VNĐ</span>
-                      <span class="discount"> 28% </span>
+                      <span class="last-price">${product.p_price}</span>
+                      <span class="discount"> ${product.discount} </span>
                   </p>
               </div>
 
@@ -289,10 +288,12 @@ function loadProductDetail(productId){
 
               <div class="product-detail">
                   <h2>Về sản phẩm: </h2>
-                  <p>- Ổi trân châu ruột đỏ giòn ngọt, tươi ngon, trái to, không bị dập. Ổi có ruột màu đỏ hồng vô cùng hấp dẫn, ổi ngọt ngon. Ổi ngon, được đóng gói cẩn thận, tiện lợi, là loại trái cây cung cấp nhiều dưỡng chất cho cơ thể. Ổi ngon, giòn nhất khi trái chắc, xanh sáng, cầm nặng tay.</p>
-                  <p>- Sản phẩm sạch, đạt tiêu chuẩn kiểm nghiệm VS ATTP.</p>
-                  <p>- Cam kết hoàn tiền hoặc giao lại ngay sản phẩm trong tất cả trường hợp khách nhận sản phẩm không đạt chất lượng gồm ổi bị dập, úng hoặc hư hỏng bên trong.</p>
-                  <p>- Liên hệ tổng đài 1900.1908 để được hỗ trợ nhanh nhất, hoặc để lại thông tin sản phẩm hư hỏng trên web/app theo hướng dẫn tại đây</p>
+                  <p style="white-space: pre-line;">
+                      - Ổi trân châu ruột đỏ giòn ngọt, tươi ngon, trái to, không bị dập. Ổi có ruột màu đỏ hồng vô cùng hấp dẫn, ổi ngọt ngon. Ổi ngon, được đóng gói cẩn thận, tiện lợi, là loại trái cây cung cấp nhiều dưỡng chất cho cơ thể. Ổi ngon, giòn nhất khi trái chắc, xanh sáng, cầm nặng tay.
+                      - Sản phẩm cam kết đạt chuẩn 100% AT VSTP.
+                      - Cam kết hoàn tiền hoặc giao lại ngay sản phẩm trong tất cả trường hợp khách nhận sản phẩm không đạt chất lượng gồm ổi bị dập, úng hoặc hư hỏng bên trong.
+                      - Liên hệ tổng đài 1900.1908 để được hỗ trợ nhanh nhất, hoặc để lại thông tin sản phẩm hư hỏng trên web/app theo hướng dẫn tại đây
+                  </p>
                   <ul>
                       <li>Trạng Thái: <span>Còn hàng</span></li>
                       <li>Khu Vực Vận Chuyển: <span>Khắp Việt Nam</span></li>
