@@ -138,8 +138,8 @@ $.ajax({
     console.error('Error fetching the products:', error);
   }
 });
-setTimeout(() => {console.log(products)}, 50)
 
+setTimeout(() => {console.log(products)}, 50)
 
 function searchProduct(keyWord='') {
   const searchInput = document.getElementById('searchInput');
@@ -288,12 +288,7 @@ function loadProductDetail(productId){
 
               <div class="product-detail">
                   <h2>Về sản phẩm: </h2>
-                  <p style="white-space: pre-line;">
-                      - Ổi trân châu ruột đỏ giòn ngọt, tươi ngon, trái to, không bị dập. Ổi có ruột màu đỏ hồng vô cùng hấp dẫn, ổi ngọt ngon. Ổi ngon, được đóng gói cẩn thận, tiện lợi, là loại trái cây cung cấp nhiều dưỡng chất cho cơ thể. Ổi ngon, giòn nhất khi trái chắc, xanh sáng, cầm nặng tay.
-                      - Sản phẩm cam kết đạt chuẩn 100% AT VSTP.
-                      - Cam kết hoàn tiền hoặc giao lại ngay sản phẩm trong tất cả trường hợp khách nhận sản phẩm không đạt chất lượng gồm ổi bị dập, úng hoặc hư hỏng bên trong.
-                      - Liên hệ tổng đài 1900.1908 để được hỗ trợ nhanh nhất, hoặc để lại thông tin sản phẩm hư hỏng trên web/app theo hướng dẫn tại đây
-                  </p>
+                  <p style="white-space: pre-line;">${product.des}</p>
                   <ul>
                       <li>Trạng Thái: <span>Còn hàng</span></li>
                       <li>Khu Vực Vận Chuyển: <span>Khắp Việt Nam</span></li>
