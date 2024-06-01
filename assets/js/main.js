@@ -218,6 +218,22 @@ function loadProductDetail(productId) {
     if (p.id == productId) product = p;
   })
 
+  var star = "";
+  var ratingStr = product.rating;
+  var ratingNumber = +(ratingStr.substring(0, ratingStr.indexOf('/')))
+
+  for(var k = 0; k < 5; k++){
+    if(ratingNumber >= 1){
+      star += '<i class="fa fa-star"></i>'
+      ratingNumber--;
+    }
+    else if(ratingNumber == 0.5){
+      star += '<i class="fa fa-star-half-o"></i>'
+      ratingNumber = 0;
+    }
+    else star += '<i class="fa fa-star-o"></i>'
+  }
+
   var productDetailInfor = `
   <div class="card-wrapper" style="margin-top: 30px; margin-bottom: 60px;">
       <div class="card">
@@ -262,11 +278,7 @@ function loadProductDetail(productId) {
           <div class="product-content">
               <h2 class="product-title">${product.name}</h2>
               <div class="product-rating">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star-half-o"></i>
-                  <i class="fa fa-star-o"></i>
+                  ${star}
                   <span>${product.rating}</span>
               </div>
 
@@ -280,10 +292,8 @@ function loadProductDetail(productId) {
 
               <div class="purchase-info">
                   <input type="number" min="0" value="1">
-                  <button type="button" class="buttn"  onclick="addToCart('Cam sành túi (0.9-1.1kg)','trái cây','img/cam1.jpg',18000)">Thêm vào giỏ hàng <i class="fa fa-shopping-cart"></i>
-                  </button>
-                  <button type="button" class="buttn">Mua
-                  </button>
+                  <button type="button" class="buttn"  onclick="addToCart('${product.name}','${product.category}','${product.image}','${product.price}')">Thêm vào giỏ hàng <i class="fa fa-shopping-cart"></i></button>
+                  <button type="button" class="buttn">Mua</button>
               </div>
 
               <div class="product-detail">
@@ -291,7 +301,7 @@ function loadProductDetail(productId) {
                   <p style="white-space: pre-line;">${product.des}</p>
                   <ul>
                       <li>Trạng Thái: <span>Còn hàng</span></li>
-                      <li>Khu Vực Vận Chuyển: <span>Khắp Việt Nam</span></li>
+                      <lif>Khu Vực Vận Chuyển: <span>Khắp Việt Nam</span></li>
                       <li>Phí Vận Chuyển: <span>20.000Đ</span></li>
                   </ul>
               </div>
