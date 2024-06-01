@@ -7,7 +7,7 @@ document.getElementById('send-infor').addEventListener('click', () => {
 
     var check = true;
 
-    if(name.value.length == 0) {
+    if (name.value.length == 0) {
         check = false;
         name.parentNode.classList.add('error');
         name.parentNode.parentNode.querySelector('.mess-error').innerText = 'Vui lòng nhập họ tên';
@@ -16,11 +16,11 @@ document.getElementById('send-infor').addEventListener('click', () => {
         name.parentNode.parentNode.querySelector('.mess-error').innerText = '';
     }
 
-    if(tel.value.length == 0) {
+    if (tel.value.length == 0) {
         check = false;
         tel.parentNode.classList.add('error');
         tel.parentNode.parentNode.querySelector('.mess-error').innerText = 'Vui lòng nhập số điện thoại';
-    } else if(!telRegex.test(tel.value)){
+    } else if (!telRegex.test(tel.value)) {
         check = false;
         tel.parentNode.classList.add('error');
         tel.parentNode.parentNode.querySelector('.mess-error').innerText = 'Số điện thoại không hợp lệ';
@@ -29,11 +29,11 @@ document.getElementById('send-infor').addEventListener('click', () => {
         tel.parentNode.parentNode.querySelector('.mess-error').innerText = '';
     }
 
-    if(email.value.length == 0) {
+    if (email.value.length == 0) {
         check = false;
         email.parentNode.classList.add('error');
         email.parentNode.parentNode.querySelector('.mess-error').innerText = 'Vui lòng nhập địa chỉ email';
-    } else if(!emailRegex.test(email.value)){
+    } else if (!emailRegex.test(email.value)) {
         check = false;
         email.parentNode.classList.add('error');
         email.parentNode.parentNode.querySelector('.mess-error').innerText = 'Email không hợp lệ';
@@ -43,7 +43,7 @@ document.getElementById('send-infor').addEventListener('click', () => {
     }
 
 
-    if(check){
+    if (check) {
         location.reload();
         alert('Gửi thông tin thành công, chúng tôi sẽ liên hệ tới bạn sau!!!');
     }
@@ -60,7 +60,7 @@ document.getElementById('clear-infor').addEventListener('click', () => {
 
     tel.parentNode.classList.remove('error');
     tel.parentNode.parentNode.querySelector('.mess-error').innerText = '';
-    
+
     email.parentNode.classList.remove('error');
     email.parentNode.parentNode.querySelector('.mess-error').innerText = '';
 })
