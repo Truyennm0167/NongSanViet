@@ -107,19 +107,19 @@
                             <tr>
                                 <td>
                                     <div class="cell" style="width: 75px; text-align: center;"
-                                        onclick="searchProduct('trai cay')">Trái Cây</div>
+                                        onclick="searchProductsByCategory('trai cay')">Trái Cây</div>
                                 </td>
                                 <td>
                                     <div class="cell" style="width: 75px; text-align: center;"
-                                        onclick="searchProduct('rau la')">Rau</div>
+                                        onclick="searchProductsByCategory('rau la')">Rau lá</div>
                                 </td>
                                 <td>
                                     <div class="cell" style="width: 75px; text-align: center;"
-                                        onclick="searchProduct('cu qua')">Củ</div>
+                                        onclick="searchProductsByCategory('cu qua')">Củ quả</div>
                                 </td>
                                 <td>
                                     <div class="cell" style="width: 75px; text-align: center;"
-                                        onclick="searchProduct('nam')">Nấm</div>
+                                        onclick="searchProductsByCategory('nam')">Nấm</div>
                                 </td>
                             </tr>
                         </table>
@@ -145,23 +145,7 @@
         </div>
 
         <!--
-        <div class="col-3 mb-5">
-            <div class="card mt-5" style="margin-left: 30px; cursor: pointer;" onclick="raumuong_redirect()">
-                <img src="img/poster_raumuong.jpg" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">Rau muống (500g)</h5>
-                    <p class="card-text" style="text-decoration:line-through;">14.000Đ</p>
-                    <div class="discount" style="margin-top: -10px;" style="margin-top: -10px;">
-                        <p style="display: inline;">12.000Đ</p>
-                        <p style="display: inline; background-color: red; color: white; padding: 2px; align-items: center; margin-left: 3px;">12%</p>
-                    </div>
-                    <div class="star-rating" style="padding-top: 5px;" style="padding-top: 5px;">
-                        4.5/5<span class="material-symbols-outlined">grade</span>
-                    </div>
-                    <a href="#" class="btn btn-success">Thêm vào giỏ hàng</a>
-                </div>
-            </div>
-        </div>  
+         
         -->
     </div>
 
@@ -233,5 +217,12 @@
         });
     });
 </script>
-
+<script>
+    window.onload = function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const category = urlParams.get('category');
+        searchProduct(category == null ? '' : category)
+        
+    }
+</script>
 </html>

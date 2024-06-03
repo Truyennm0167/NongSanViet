@@ -100,12 +100,14 @@
 
 .last-price {
     text-decoration: line-through;
+    font-style: italic;
 }
 .discount {
     background-color: #f64749;
     color: #ddd;
     padding: 1px;
     text-decoration: none;
+    font-style: italic;
 }
 
 .new-price span {
