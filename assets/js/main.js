@@ -467,7 +467,6 @@ function loadCart(){
       </div>
     `
   }
-
 }
 
 // Hàm tính và cập nhật tổng tiền trong trang giỏ hàng
