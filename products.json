@@ -57,7 +57,7 @@
   },
   {
     "id": "TC005",
-    "name": "Cam sành túi (0.9-1.1kg)",
+    "name": "Cam sành túi (1kg)",
     "category": "trái cây",
     "price": "25000",
     "discount": "0.2",
@@ -267,7 +267,7 @@
   },
   {
     "id": "N005",
-    "name": "Nấm linh chi nâu 150g",
+    "name": "Nấm linh chi nâu (150g)",
     "category": "nấm",
     "price": "33000",
     "discount": "0",
