@@ -282,3 +282,11 @@ main h2 {
     margin-left: 3px;
 }
 
+.product-rating {
+    color: #ffc107;
+}
+
+.product-rating span {
+    font-weight: 600;
+    color: #252525;
+}

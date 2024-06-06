@@ -166,7 +166,7 @@ function searchProduct(keyWord = '') {
           </div>
           <div>
             <p style="display: inline;">${formatPrice(priceDiscounted)} VNĐ</p>
-            <p class="discount">${+(product.discount * 100) + "%"}</p>
+            <p class="discount">-${+(product.discount * 100)}%</p>
           </div>
         `
       } else {
@@ -179,7 +179,23 @@ function searchProduct(keyWord = '') {
           </div>
         `
       }
-      
+
+      let star = "";
+      const ratingStr = product.rating;
+      let ratingNumber = +(ratingStr.substring(0, ratingStr.indexOf('/')))
+      let tmp = ratingNumber;
+      for(var k = 0; k < 5; k++){
+        if(tmp >= 1){
+          star += '<i class="fa fa-star"></i>'
+          tmp--;
+        }
+        else if(tmp == 0.5){
+          star += '<i class="fa fa-star-half-o"></i>'
+          tmp = 0;
+        }
+        else star += '<i class="fa fa-star-o"></i>'
+      }
+
       var productHtml = `
         <div class="col-3 mb-3" style="margin-top:20px;">
           <div class="card mt-3" style="margin-left: 30px; cursor: pointer;" onclick="searchProductDetail('${product.id}')">
@@ -187,8 +203,9 @@ function searchProduct(keyWord = '') {
             <div class="card-body">
               <h5 class="card-title" style="margin-bottom: 0px">${product.name}</h5>
               ${priceContainer}
-              <div class="star-rating" style="padding-top: 5px;" style="padding-top: 5px;">
-                ${product.rating}<span class="material-symbols-outlined">grade</span>
+              <div class="product-rating">
+                ${star}
+                <span>${ratingNumber}</span>
               </div>
               <button class="btn btn-success">Thêm vào giỏ hàng</button>
             </div>
@@ -235,15 +252,15 @@ function loadProductDetail(productId) {
   let star = "";
   const ratingStr = product.rating;
   let ratingNumber = +(ratingStr.substring(0, ratingStr.indexOf('/')))
-
+  let tmp = ratingNumber;
   for(var k = 0; k < 5; k++){
-    if(ratingNumber >= 1){
+    if(tmp >= 1){
       star += '<i class="fa fa-star"></i>'
-      ratingNumber--;
+      tmp--;
     }
-    else if(ratingNumber == 0.5){
+    else if(tmp == 0.5){
       star += '<i class="fa fa-star-half-o"></i>'
-      ratingNumber = 0;
+      tmp = 0;
     }
     else star += '<i class="fa fa-star-o"></i>'
   }
@@ -255,7 +272,7 @@ function loadProductDetail(productId) {
       <p class="new-price"><span>${formatPrice(priceDiscounted)} VNĐ</span></p>
       <p>
         <span class="last-price">${formatPrice(+product.price)}</span>
-        <span class="discount">${(product.discount * 100) + "%"}</span>
+        <span class="discount">-${(product.discount * 100)}%</span>
       </p>
     `
   } else {
@@ -280,7 +297,7 @@ function loadProductDetail(productId) {
         <div class="img-select">
             <div class="img-item">
               <div onclick="slideImage(1)">
-                  img src="${product.img1}" alt="">
+                <img src="${product.img1}" alt="">
               </div>
             </div>
 
@@ -305,10 +322,10 @@ function loadProductDetail(productId) {
       </div>
 
       <div class="product-content">
-        <h2 class="product-title">${product.name}</h2>
+        <h2 class="product-detail-title">${product.name}</h2>
         <div class="product-rating">
           ${star}
-          <span>${product.rating}</span>
+          <span>${ratingNumber}</span>
         </div>
 
         <div class="product-price">
@@ -410,7 +427,7 @@ function loadCart(){
       </table>
       <div>
         <b style="text-align: right; font-size: larger;">
-          <p id="total">Tổng tiền: 0đ</p>
+          <p id="total"></p>
         </b>
         <div class="d-flex justify-content-between">
           <a href="product.html" class="btn btn-success buy-extra">Mua thêm sản phẩm</a>
@@ -478,6 +495,7 @@ function updateTotal(cart) {
   })
   // Hiển thị tổng tiền
   document.getElementById("total").textContent = "Tổng tiền: " + formatPrice(total) + " VNĐ";
+  sessionStorage.setItem('total', total);
 }
 
 // Hàm thực hiện xóa item trong giỏ hàng - xóa row
@@ -490,4 +508,43 @@ function removeCartItem(row) {
   localStorage.setItem("cart", JSON.stringify(cart));
 
   updateTotal(cart);
+}
+
+function loadTotal(){
+  const total = sessionStorage.getItem('total');
+  document.getElementById('totalProductPrice').textContent = formatPrice(+total) + " VNĐ";
+  sessionStorage.setItem('shipFee', 20000);
+  const shipFee = sessionStorage.getItem('shipFee');
+  document.getElementById('shipFee').textContent = formatPrice(+shipFee) + " VNĐ"
+  document.getElementById('totalPayment').textContent = formatPrice(+total + +shipFee) + " VNĐ";
+}
+
+function applyDiscount(){
+  const discountCode = 'anhhieudeptrai';
+  const codeValue = document.getElementById('code').value;
+  const totalPayment = +sessionStorage.getItem('total') + +sessionStorage.getItem('shipFee');
+
+  const codeInput = document.getElementById('code');
+  if(codeValue == discountCode){
+
+    let priceContainer = `
+      <p class="new-price"><span>${formatPrice(totalPayment * 0.5)} VNĐ</span></p>
+      <p>
+        <span class="last-price">${formatPrice(totalPayment)}</span>
+        <span class="discount">-${(0.5 * 100)}%</span>
+      </p>
+    `
+
+    document.getElementById('totalPayment').innerHTML = priceContainer;
+    codeInput.parentNode.classList.remove('error');
+    codeInput.parentNode.parentNode.querySelector('.mess-error').innerText = '';
+  } else {
+
+    let priceContainer = `
+      <p class="new-price"><span>${formatPrice(totalPayment)} VNĐ</span></p>
+    `
+    document.getElementById('totalPayment').innerHTML = priceContainer
+    codeInput.parentNode.classList.add('error');
+    codeInput.parentNode.parentNode.querySelector('.mess-error').innerText = 'Mã giảm giá không hợp lệ';
+  }
 }

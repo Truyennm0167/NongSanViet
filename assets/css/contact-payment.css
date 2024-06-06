@@ -80,7 +80,7 @@ html {
     margin-left: 5px;
 }
 
-#send-infor {
+.confirm-btn {
     border: 1px solid #71B979;
     background-color: #71B979;
     border-radius: 25px;
@@ -90,7 +90,7 @@ html {
     margin-top: 10px;
 }
 
-#send-infor:hover {
+.confirm-btn:hover {
     background-color: white;
     color: #71B979;
 }
@@ -117,4 +117,49 @@ html {
 
 .error input::placeholder{
     color: rgb(255, 100, 100);
+}
+
+.payment-container .enter-item{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.enter-item textarea {
+    width: 93%;
+    margin: 5px;
+    margin-left: 20px;
+    border: none;
+    resize: none;
+}
+
+.enter-item textarea:focus {
+    outline: none;
+}
+
+.titleDetailPayment {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.product-price {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.product-price span {
+    font-weight: 400;
+}
+
+.last-price {
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.discount {
+    background-color: #f64749;
+    color: #ddd;
+    padding: 1px;
+    text-decoration: none;
+    font-style: italic;
 }
