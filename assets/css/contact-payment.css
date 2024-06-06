@@ -141,25 +141,27 @@ html {
     font-weight: bold;
 }
 
-.product-price {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-    font-weight: 700;
+.cost-container {
+    height: 20px;
+    margin-bottom: 4px;
 }
 
-.product-price span {
-    font-weight: 400;
-}
-
-.last-price {
-    text-decoration: line-through;
+.cost {
+    display: inline-block;
+    text-decoration:line-through;
     font-style: italic;
+    font-size: 14px;
 }
 
 .discount {
-    background-color: #f64749;
-    color: #ddd;
-    padding: 1px;
-    text-decoration: none;
-    font-style: italic;
+    display: inline-block;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.current-price {
+    display: inline;
 }

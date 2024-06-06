@@ -1,3 +1,11 @@
+* {
+    font-family: Quicksand, Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 header {
     height: 200px;
     padding-top: 20px;
