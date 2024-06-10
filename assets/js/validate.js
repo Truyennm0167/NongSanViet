@@ -123,6 +123,7 @@ function comfirm() {
         alert('Đặt hàng thành công, chúng tôi sẽ liên hệ tới bạn sau ít phút!!!');
         localStorage.removeItem('cart');    
         sessionStorage.removeItem('total');
+        window.location.href = 'cart.html';
     }
 
 }
