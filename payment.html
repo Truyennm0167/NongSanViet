@@ -94,51 +94,52 @@
         <form action="">
           <div class="payment-container row">
             <div class="col-6">
-              <div class="title text-center">
-                <h4>THÔNG TIN LIÊN LẠC</h4>
-              </div>
+                <div class="title text-center">
+                    <h4>THÔNG TIN LIÊN LẠC</h4>
+                </div>
 
-              <div class="enter-infor-container m-3">
-                <div class="item">
+                <div class="enter-infor-container m-3">
+                    <div class="item">
+                        <div class="enter-item">
+                            <input type="text" id="name" placeholder="Họ và tên">
+                        </div>
+                        <p class="mess-error"></p>
+                    </div>
+
+                    <div class="item">
+                        <div class="enter-item">
+                            <input type="text" id="tel" placeholder="Số điện thoại">
+                        </div>
+                        <p class="mess-error"></p>
+                    </div>
+
+                    <div class="item">
+                        <div class="enter-item">
+                            <input type="email" id="email" placeholder="Email">
+                        </div>
+                        <p class="mess-error"></p>
+                    </div>
+
+                    <div class="item">
                     <div class="enter-item">
-                        <input type="text" id="name" placeholder="Họ và tên">
+                        <textarea rows="2" name="" id="place" placeholder="Địa chỉ"></textarea>
                     </div>
                     <p class="mess-error"></p>
-                </div>
+                    </div>
 
-                <div class="item">
+                    <div class="item">
                     <div class="enter-item">
-                        <input type="text" id="tel" placeholder="Số điện thoại">
+                        <textarea rows="3" name="" id="note" placeholder="Ghi chú"></textarea>
                     </div>
                     <p class="mess-error"></p>
-                </div>
-
-                <div class="item">
-                    <div class="enter-item">
-                        <input type="email" id="email" placeholder="Email">
                     </div>
-                    <p class="mess-error"></p>
-                </div>
-
-                <div class="item">
-                  <div class="enter-item">
-                      <textarea rows="2" name="" id="place" placeholder="Địa chỉ"></textarea>
-                  </div>
-                  <p class="mess-error"></p>
-                </div>
-
-                <div class="item">
-                  <div class="enter-item">
-                      <textarea rows="3" name="" id="note" placeholder="Ghi chú"></textarea>
-                  </div>
-                  <p class="mess-error"></p>
-                </div>
 
 
                 
-              </div>
+                </div>
 
             </div>
+            
             <div class="col-6" style="padding-left: 70px;">
               <div class="title mb-3">
                 <h4>ĐƠN HÀNG</h4>
@@ -178,15 +179,17 @@
 
               <div class="row">
                 <div class="col-6">
-                  <p class="titleDetailPayment">Tổng tiền thanh toán:</p>
-                </div>
+                    <div class="cost-container">
+                        <p class="card-text cost"></p>
+                    </div>  
+                    <p class="titleDetailPayment">Tổng tiền thanh toán:</p>
+                </div>              
                 <div id="totalPayment" class="col-6 text-center">
                     
                 </div>
               </div>
 
-              <button class="confirm-btn" type="button" id="" style="width: 82%;">Xác nhận đặt hàng</button>
-
+              <button class="confirm-btn" type="button" id="confirm" style="width: 82%;" onclick="comfirm()">Xác nhận đặt hàng</button>
 
             </div>
           </div>
@@ -240,6 +243,7 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/enter-infor.contact.js"></script>
 <script>
     const toTopBtn = document.querySelector(".to-top");
     window.addEventListener('scroll', () => {

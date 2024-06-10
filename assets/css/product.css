@@ -120,6 +120,7 @@
 
 .current-price {
     display: inline;
+    font-weight: bold;
 }
 
 .product-rating {

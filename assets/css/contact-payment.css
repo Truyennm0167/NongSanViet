@@ -115,13 +115,12 @@ html {
     border: 1px solid rgb(255, 100, 100);
 }
 
-.error input::placeholder{
+.error input::placeholder, .error textarea::placeholder {
     color: rgb(255, 100, 100);
 }
 
 .payment-container .enter-item{
-    width: 70%;
-    margin-left: 15%;
+    width: 80%;
 }
 
 .enter-item textarea {
@@ -164,4 +163,9 @@ html {
 
 .current-price {
     display: inline;
+    font-weight: bold;
+}
+
+.enter-infor-container {
+    padding-left: 120px;
 }

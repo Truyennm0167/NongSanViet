@@ -348,8 +348,8 @@ function getProductById(productId){
 }
 
 // Hàm load hiển thị giỏ hàm trong trang giỏ hàng
-function loadCart(){
-  if(localStorage.getItem("cart") != '[]'){
+function loadCart(){  
+  if(localStorage.getItem("cart") != null){
 
     document.getElementsByClassName("cart-container")[0].innerHTML = `
       <table class="table" id="cart">
@@ -452,33 +452,35 @@ function removeCartItem(row) {
   updateTotal(cart);
 }
 
+// Tải và hiển thị tổng giá trong trang thanh toán
 function loadTotal(){
   const total = sessionStorage.getItem('total');
   document.getElementById('totalProductPrice').textContent = formatPrice(+total) + " VNĐ";
   sessionStorage.setItem('shipFee', 20000);
   const shipFee = sessionStorage.getItem('shipFee');
   document.getElementById('shipFee').textContent = formatPrice(+shipFee) + " VNĐ"
-  document.getElementById('totalPayment').textContent = formatPrice(+total + +shipFee) + " VNĐ";
+  document.getElementById('totalPayment').innerHTML = createPriceContainer(+total + +shipFee, 0);
 }
 
+// Kiểm tra và áp dụng discount
 function applyDiscount(){
   const discountCode = 'anhhieudeptrai';
   const codeValue = document.getElementById('code').value;
   const totalPayment = +sessionStorage.getItem('total') + +sessionStorage.getItem('shipFee');
   const codeInput = document.getElementById('code');
-  const priceContainer = createPriceContainer(totalPayment, 0.5)
 
   if(codeValue == discountCode){
-    document.getElementById('totalPayment').innerHTML = priceContainer;
+    document.getElementById('totalPayment').innerHTML = createPriceContainer(totalPayment, 0.5);
     codeInput.parentNode.classList.remove('error');
     codeInput.parentNode.parentNode.querySelector('.mess-error').innerText = '';
   } else {
-    document.getElementById('totalPayment').innerHTML = priceContainer
+    document.getElementById('totalPayment').innerHTML = createPriceContainer(totalPayment, 0);
     codeInput.parentNode.classList.add('error');
     codeInput.parentNode.parentNode.querySelector('.mess-error').innerText = 'Mã giảm giá không hợp lệ';
   }
 }
 
+// Tạo vùng hiển thị giá cả - tùy thuộc vào discount
 function createPriceContainer(price, discount){
   if(discount > 0){
     return `
@@ -492,7 +494,7 @@ function createPriceContainer(price, discount){
     `
   }
   return `
-    <div class="cost">
+    <div class="cost-container">
       <p class="card-text cost"></p>
     </div>
     <div>
@@ -501,6 +503,7 @@ function createPriceContainer(price, discount){
   `  
 }
 
+// Tạo ra vùng hiển thị đánh giá (số sao)
 function createRatingContainer(rating) {
   let star = "";
   const ratingNumber = +(rating.substring(0, rating.indexOf('/')))
