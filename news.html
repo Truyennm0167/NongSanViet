@@ -32,6 +32,7 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
+
 <body>
 
     <!--Header-->
@@ -45,7 +46,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">Giới thiệu</a>
-                        
+
                     </li>
                 </ul>
                 <div>
@@ -65,12 +66,12 @@
             <div class="d-flex justify-content-end">
                 <div class="header-btn shopping-cart-btn">
                     <div class="shopping-cart-icon">
-                       <a href="cart.html">
+                        <a href="cart.html">
                             <i id="cart-icon" class="ti-shopping-cart text-secondary"></i>
-                        </a> 
+                        </a>
                     </div>
                 </div>
-    
+
                 <div class="header-btn account">
                     <a href="">
                         <div class="nav-item dropdown account-icon">
@@ -85,7 +86,7 @@
                     </a>
                 </div>
             </div>
-            
+
         </div>
     </header>
     <!--End Header-->
@@ -244,8 +245,8 @@
                                     Trang chủ</a>
                             </li>
                             <li>
-                                <a href="about.html"> <span
-                                        class="material-symbols-outlined arrow">arrow_left</span> Giới thiệu</a>
+                                <a href="about.html"> <span class="material-symbols-outlined arrow">arrow_left</span>
+                                    Giới thiệu</a>
                             </li>
                             <li>
                                 <a href="product.html"> <span class="material-symbols-outlined arrow">arrow_left</span>
@@ -268,19 +269,21 @@
         </div>
 
     </main>
-    
+
     <button class="to-top" href="#"><i class="ti-angle-double-up"></i></button>
     <button class="contact-btn" href="#"><a href="contact.html"><i class="ti-headphone-alt"></i></a></button>
     <!--Footer-->
     <footer class="">
-            <div class="row">
+        <div class="row">
             <div class="col">
                 <h3 class="footer-tittle">Giới Thiệu</h3>
                 <p class="">
-                    <b>Nông Sản Việt</b> là hành trình của những bạn trẻ nhiệt huyết, đến từ những miền quê khác nhau, kiên trì dấn thân để cùng nhau góp phần cải thiện chuỗi cung ứng nông sản Việt và mang thực phẩm an tâm đến cho cộng đồng.
+                    <b>Nông Sản Việt</b> là hành trình của những bạn trẻ nhiệt huyết, đến từ những miền quê khác nhau,
+                    kiên trì dấn thân để cùng nhau góp phần cải thiện chuỗi cung ứng nông sản Việt và mang thực phẩm an
+                    tâm đến cho cộng đồng.
                 </p>
             </div>
-    
+
             <div class="col contact-info">
                 <h3 class="footer-tittle">Thông Tin Liên Hệ</h3>
                 <ul class="list-group list-group-flush">
@@ -298,7 +301,7 @@
                     </li>
                 </ul>
             </div>
-    
+
             <div class="col">
                 <img src="./img/logo.png" alt="">
                 <p class="copyright text-center">Nông Sản Việt © 2024. All rights reserved.</p>
@@ -306,7 +309,7 @@
         </div>
     </footer>
     <!--End Footer-->
-    
+
 </body>
 <style>
     .swiper {
@@ -336,16 +339,16 @@
 <script>
     const toTopBtn = document.querySelector(".to-top");
     window.addEventListener('scroll', () => {
-        if(window.pageYOffset > 50){
+        if (window.pageYOffset > 50) {
             toTopBtn.classList.add('active');
         } else {
             toTopBtn.classList.remove('active');
         }
     })
 
-    $(document).ready(function(){
-        $('.to-top').click(function(){
-            $('html, body').animate({scrollTop : 0},800);
+    $(document).ready(function () {
+        $('.to-top').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 800);
             return false;
         });
     });
@@ -357,16 +360,17 @@
 <!-- Initialize Swiper Slider-->
 <script>
     var swiper = new Swiper(".myNewsSwiper", {
-      spaceBetween: 0,
-      centeredSlides: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+        spaceBetween: 0,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
     });
-  </script>
+</script>
+
 </html>

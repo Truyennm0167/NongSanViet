@@ -261,3 +261,33 @@ main h2 {
     background-color: azure;
     cursor: pointer;
 }
+
+.old-price {
+    height: 20px;
+}
+
+.old-price p {
+    text-decoration:line-through;
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.discount {
+    display: inline;
+    background-color: red;
+    color: white;
+    padding: 2px;
+    align-items: center;
+    margin-left: 3px;
+}
+
+.product-rating {
+    color: #ffc107;
+}
+
+.product-rating span {
+    font-weight: 600;
+    color: #252525;
+}
+
