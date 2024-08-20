@@ -9,7 +9,7 @@ html {
 
 main .col {
     margin: 10px;
-    border: 1px solid white;
+    border: 1px solid #F7F5F3;
     border-radius: 20px;
 }
 
@@ -50,8 +50,7 @@ main .col:hover{
     margin: 3% auto;
     line-height: 2;
     text-align: center;
-    background-color: #FFF5E6;
-   
+    background-color: #FFF5E6; 
 }
 
 #icon {
@@ -67,7 +66,7 @@ main .col:hover{
     color: rgb(250, 244, 244);
 }
 
- h4{
+h4{
     font-size: 24px;
     display: block;
     margin-block-start: 1em;
@@ -99,4 +98,8 @@ main .col:hover{
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
+}
+
+.text-center img {
+    margin-top: 20px;
 }
